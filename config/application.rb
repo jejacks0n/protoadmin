@@ -30,7 +30,7 @@ module Protoadmin
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    # Adding custom generators, which are not included in ProtoAdmin::Engine.
+    # Add custom generators for tests, which are not included in ProtoAdmin::Engine.
     config.generators do |g|
       g.test_framework :rspec, :views => false, :fixture => true
       g.fixture_replacement :factory_girl, :dir => 'spec/factories'
