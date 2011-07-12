@@ -74,6 +74,8 @@ GEM
       factory_girl (~> 1.3)
       railties (>= 3.0.0)
     ffi (1.0.9)
+    formtastic (2.0.0.rc3)
+      rails (~> 3.0)
     git (1.2.5)
     haml (3.1.2)
     hike (1.1.0)
@@ -194,6 +196,7 @@ DEPENDENCIES
   database_cleaner
   evergreen!
   factory_girl_rails
+  formtastic (~> 2.0.rc3)
   haml
   jeweler
   jquery-rails
