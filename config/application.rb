@@ -6,11 +6,14 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
-module Protoadmin
+module ProtoAdmin
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    config.session_store :cookie_store, :key => '_protoadmin_session'
+    config.secret_token = '7c3828af4c733191e2a5802517181f01956ba6f9cd3b84eb87c74295c107475bb7a86ddfcae5e4698a92475e40ab6da4ac8c376107cffff81244d318695b3b6d'
 
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += Dir["#{config.root}/lib/**/"]

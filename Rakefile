@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Protoadmin::Application.load_tasks
+ProtoAdmin::Application.load_tasks
