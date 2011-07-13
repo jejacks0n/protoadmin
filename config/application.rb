@@ -6,8 +6,11 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
-module ProtoAdmin
+module Protoadmin
   class Application < Rails::Application
+    require 'protoadmin'
+    require "#{root}/lib/protoadmin"
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -33,7 +36,7 @@ module ProtoAdmin
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    # Add custom generators for tests, which are not included in ProtoAdmin::Engine.
+    # Add custom generators for tests, which are not included in Protoadmin::Engine.
     config.generators do |g|
       g.test_framework :rspec, :views => false, :fixture => true
       g.fixture_replacement :factory_girl, :dir => 'spec/factories'

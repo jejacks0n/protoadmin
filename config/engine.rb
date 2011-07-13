@@ -1,6 +1,6 @@
 require "rails"
 
-module ProtoAdmin
+module Protoadmin
   class Engine < Rails::Engine
 
     # Template engines.
@@ -16,9 +16,12 @@ module ProtoAdmin
       app.paths.app.views.push "#{root}/app/views"
     end
 
+    # Autoload paths.
+    config.autoload_paths += %W( #{root}/lib/protoadmin )
+
     # Base navigation that can be added to from plugins and the application.
     config.to_prepare do
-      #ProtoAdmin::Navigation.add do |n|
+      #Protoadmin::Navigation.add do |n|
       #
       #  n.group 'Dashboard' do
       #    n.item 'Overview', :link => {:controller => 'dashboard', :action => :show}, :highlights_on => {:controller => 'dashboard'}

@@ -23,62 +23,11 @@
       %form#quick_search
         %input{ :type => 'text', :placeholder => 'Quick Search' }
         %hr
-
-      %ul#primary_navigation
-        %li{ :class => 'with-group' }
-          %span Content
-          %ul
-            %li
-              %a{ :href => '#', :class => 'articles-new' }
-                %span Add New Article
-            %li
-              %a{ :href => '#', :class => 'articles-index' }
-                %span View Articles
-            %li
-              %a{ :href => '#', :class => 'categories-index' }
-                %span Categories
-            %li
-              %a{ :href => '#', :class => 'tags-index' }
-                %span Tags
-        %li{ :class => 'with-group' }
-          %span Users
-          %ul
-            %li
-              %a{ :href => '#' }
-                %span Add New User
-            %li
-              %a{ :href => '#' }
-                %span View Users
-            %li
-              %a{ :href => '#' }
-                %span Your Profile
-        %li{ :class => 'with-group' }
-          %span Media
-          %ul
-            %li
-              %a{ :href => '#' }
-                %span File Manager
-            %li
-              %a{ :href => '#' }
-                %span Gallery
-            %li
-              %a{ :href => '#' }
-                %span Audio
-            %li
-              %a{ :href => '#' }
-                %span Video
-        %li{ :class => 'with-group' }
-          %span Admin
-          %ul
-            %li
-              %a{ :href => '#' }
-                %span Options
-            %li
-              %a{ :href => '#' }
-                %span Security
-            %li
-              %a{ :href => '#' }
-                %span Logout
+      - semantic_navigation :primary_navigation do |n|
+        - Protoadmin::Navigation.structure.each do |group|
+          = n.group group[0], group[1][:options] do
+            - group[1][:items].each do |item|
+              = n.item item[0], item[1]
 
     #content
       = yield
