@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #FFF url(/assets/protoadmin/background.png) repeat-y;
+}
+body, td {
+  font: normal normal normal 12px/normal 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif
+}
+hr {
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #F0F0F2;
+}
+
+/* Site Title, Section Title, and additional controls
+ *---------------------------------------------------------------------------*/
+#primary_bar {
+  height: 55px;
+  background: #000 url(/assets/protoadmin/primary-bar-background.png) repeat-x;
+  color: #FFF;
+  h1, h2 {
+    margin: 0;
+    height: 55px;
+    padding: 0 20px;
+    font: normal 300 normal 2.1em/52px 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+  }
+  /* Site Title */
+  h1 {
+    float: left;
+    width: 240px;
+  }
+  /* Section Title */
+  h2 {
+    position: absolute;
+    right: 0;
+    left: 278px;
+    background: url(/assets/protoadmin/primary-bar-separator.png) no-repeat;
+    text-align: center;
+    font-size: 1.9em;
+  }
+}
+
+/* User Information and Breadcrumbs
+ *---------------------------------------------------------------------------*/
+#secondary_bar {
+  height: 38px;
+  background: url(/assets/protoadmin/secondary-bar-background.png) repeat-x;
+  color: #666;
+  text-shadow: 0 1px 0 #FFF;
+  h3, h4 {
+    margin: 0;
+    height: 38px;
+    padding: 0 20px;
+    white-space: nowrap;
+    font: normal bold normal 1em/normal 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+  }
+  /* User Info */
+  h3 {
+    background: url(/assets/protoadmin/secondary-bar-user-icon.png) 20px 30% no-repeat;
+    float: left;
+    width: 240px;
+    padding: 0 20px 0 42px;
+    line-height: 33px;
+    a {
+      color: #333;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  /* Breadcrumbs */
+  h4 {
+    position: absolute;
+    right: 0;
+    left: 278px;
+    background: url(/assets/protoadmin/secondary-bar-separator.png) no-repeat;
+    #breadcrumbs {
+      float: left;
+      height: 23px;
+      margin: 4px 0;
+      padding: 0 10px 0 6px;
+      border: 1px solid #CCC;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 1px 0 #FFF;
+      -moz-box-shadow: 0 1px 0 #FFF;
+      box-shadow: 0 1px 0 #FFF;
+    }
+    a {
+      display: inline-block;
+      line-height: 23px;
+      height: 24px;
+      padding: 0 18px 0 4px;
+      background: url(/assets/protoadmin/breadcrumb-separator.png) bottom right no-repeat;
+      text-decoration: none;
+      color: #44474F;
+      &:hover {
+        color: #111;
+      }
+      &:last-child {
+        cursor: default;
+        padding-right: 0;
+        background: none;
+        color: #999;
+      }
+    }
+  }
+}
+
+/* Quick Search and Navigation
+ *---------------------------------------------------------------------------*/
+#control {
+  float: left;
+  width: 240px;
+  padding: 0 20px;
+  hr {
+    margin: 10px -18px 10px -20px;
+  }
+  form#quick_search {
+    display: block;
+    margin: 10px 0 0 0;
+    padding: 0 0 5px 0;
+    input {
+      padding: 5px 10px 5px 25px;
+      box-sizing: border-box;
+      width: 100%;
+      outline: none;
+      border: 1px solid #BBB;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+      -webkit-box-shadow: inset 0 2px 2px #CCC, 0 1px 0 #FFF;
+      -moz-box-shadow: inset 0 2px 2px #CCC, 0 1px 0 #FFF;
+      box-shadow: inset 0 2px 2px #CCC, 0 1px 0 #FFF;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      background: #FFF url(/assets/protoadmin/quick-search-background.png) 5px 50% no-repeat;
+    }
+  }
+  ul#primary_navigation {
+    margin: 0 0 10px 0;
+    padding: 0;
+    list-style: none;
+    text-shadow: 0 1px 0 #FFF;
+    li {
+      margin-top: 5px;
+      span {
+        display: block;
+        cursor: pointer;
+        background: url(/assets/protoadmin/arrow-expand.png) right 50% no-repeat;
+        font-size: 1.1em;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 5px 0 10px 0;
+      list-style: none;
+      li {
+        margin-top: 5px;
+        a {
+          margin-left: 15px;
+          color: #666;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        span {
+          display: inline;
+          cursor: default;
+          background: none;
+          text-transform: none;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+
+/* Primary Content Area
+ *---------------------------------------------------------------------------*/
+#content {
+  position: absolute;
+  right: 0;
+  left: 278px;
+  padding: 20px;
+}
+
+/* Additional Info, Copyright, and MediaLoot link
+ *---------------------------------------------------------------------------*/
+#info {
+  width: 240px;
+  float: left;
+  clear: left;
+  padding: 5px 20px;
+  color: #666;
+  text-shadow: 0 1px 0 #FFF;
+  hr {
+    margin: 10px -18px 15px -20px;
+  }
+  h5 {
+    margin: 0 0 10px;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  a {
+    color: #666;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

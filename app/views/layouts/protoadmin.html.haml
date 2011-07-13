@@ -22,7 +22,8 @@
     #control
       %form#quick_search
         %input{ :type => 'text', :placeholder => 'Quick Search' }
-      %hr
+        %hr
+
       %ul#primary_navigation
         %li{ :class => 'with-group' }
           %span Content
@@ -30,10 +31,13 @@
             %li
               %a{ :href => '#', :class => 'articles-new' }
                 %span Add New Article
+            %li
               %a{ :href => '#', :class => 'articles-index' }
                 %span View Articles
+            %li
               %a{ :href => '#', :class => 'categories-index' }
                 %span Categories
+            %li
               %a{ :href => '#', :class => 'tags-index' }
                 %span Tags
         %li{ :class => 'with-group' }
@@ -42,8 +46,10 @@
             %li
               %a{ :href => '#' }
                 %span Add New User
+            %li
               %a{ :href => '#' }
                 %span View Users
+            %li
               %a{ :href => '#' }
                 %span Your Profile
         %li{ :class => 'with-group' }
@@ -52,10 +58,13 @@
             %li
               %a{ :href => '#' }
                 %span File Manager
+            %li
               %a{ :href => '#' }
                 %span Gallery
+            %li
               %a{ :href => '#' }
                 %span Audio
+            %li
               %a{ :href => '#' }
                 %span Video
         %li{ :class => 'with-group' }
@@ -64,16 +73,18 @@
             %li
               %a{ :href => '#' }
                 %span Options
+            %li
               %a{ :href => '#' }
                 %span Security
+            %li
               %a{ :href => '#' }
                 %span Logout
-      %hr
 
     #content
       = yield
 
     #info
+      %hr
       %h5 Copyright &copy; 2011 Site Title
       %span Theme by #{link_to 'MediaLoot', 'http://www.medialoot.com/', :target => '_blank'}
 
