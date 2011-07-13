@@ -9,7 +9,6 @@ gem 'haml'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'formtastic', '~> 2.0.rc3'
-gem 'jquery-rails'
 
 group :development, :test do
   gem 'thin'

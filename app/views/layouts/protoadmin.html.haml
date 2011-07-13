@@ -1,0 +1,82 @@
+!!!
+%html
+  %head
+    %title Site Title
+    = stylesheet_link_tag "protoadmin"
+    = javascript_include_tag "protoadmin"
+    = csrf_meta_tags
+  %body
+
+    #primary_bar
+      %h1 Site Title
+      %h2 Section Title
+
+    #secondary_bar
+      %h3 John Doe (#{link_to '3 Messages', '#'})
+      %h4
+        #breadcrumbs
+          = link_to 'Bread', '#'
+          = link_to 'Crumb', '#'
+          = link_to 'Path', '#'
+
+    #control
+      %form#quick_search
+        %input{ :type => 'text', :placeholder => 'Quick Search' }
+      %hr
+      %ul#primary_navigation
+        %li{ :class => 'with-group' }
+          %span Content
+          %ul
+            %li
+              %a{ :href => '#', :class => 'articles-new' }
+                %span Add New Article
+              %a{ :href => '#', :class => 'articles-index' }
+                %span View Articles
+              %a{ :href => '#', :class => 'categories-index' }
+                %span Categories
+              %a{ :href => '#', :class => 'tags-index' }
+                %span Tags
+        %li{ :class => 'with-group' }
+          %span Users
+          %ul
+            %li
+              %a{ :href => '#' }
+                %span Add New User
+              %a{ :href => '#' }
+                %span View Users
+              %a{ :href => '#' }
+                %span Your Profile
+        %li{ :class => 'with-group' }
+          %span Media
+          %ul
+            %li
+              %a{ :href => '#' }
+                %span File Manager
+              %a{ :href => '#' }
+                %span Gallery
+              %a{ :href => '#' }
+                %span Audio
+              %a{ :href => '#' }
+                %span Video
+        %li{ :class => 'with-group' }
+          %span Admin
+          %ul
+            %li
+              %a{ :href => '#' }
+                %span Options
+              %a{ :href => '#' }
+                %span Security
+              %a{ :href => '#' }
+                %span Logout
+      %hr
+
+    #content
+      = yield
+
+    #info
+      %h5 Copyright &copy; 2011 Site Title
+      %span Theme by #{link_to 'MediaLoot', 'http://www.medialoot.com/', :target => '_blank'}
+
+:plain
+  <style>
+  </style>
