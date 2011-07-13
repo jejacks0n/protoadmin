@@ -8,7 +8,10 @@ gem 'sass-rails', "~> 3.1.0.rc"
 gem 'haml'
 gem 'coffee-script'
 gem 'uglifier'
+
+# Additional UI gems
 gem 'formtastic', '~> 2.0.rc3'
+gem 'navigasmic'
 
 group :development, :test do
   gem 'thin'
