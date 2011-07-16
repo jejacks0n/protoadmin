@@ -12,12 +12,15 @@ module Protoadmin
     config.encoding = 'utf-8'
 
     # View paths so layouts and views can be used.
-    initializer 'protosite.add_paths' do |app|
-      app.paths.app.views.push "#{root}/app/views"
+    initializer 'protoadmin.add_paths' do |app|
+      app.paths["#{root}/app/views"]
     end
 
     # Autoload paths.
     config.autoload_paths += %W( #{root}/lib/protoadmin )
+
+    # Add better handling for I18n
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{yml,rb}')]
 
     # Base navigation that can be added to from plugins and the application.
     config.to_prepare do
