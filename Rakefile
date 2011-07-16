@@ -4,7 +4,7 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-ProtoAdmin::Application.load_tasks
+Protoadmin::Application.load_tasks
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
@@ -38,8 +38,8 @@ Jeweler::Tasks.new do |gem|
     'config/boot.rb',
     'config/database.yml',
     'config/environment.rb',
-    'db/**/*',
     'log/*',
+    'log/.gitkeep',
     'public/**/*',
     ].each do |file_or_dir|
       gem.files.exclude file_or_dir
