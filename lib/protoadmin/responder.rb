@@ -5,7 +5,7 @@ class Protoadmin::Responder < ActionController::Responder
   include Responders::FlashResponder
 
   cattr_accessor :flash_keys
-  @@flash_keys = [ :success, :notice, :alert, :error ]
+  @@flash_keys = [:success, :notice, :alert, :error]
 
   def initialize(controller, resources, options = {})
     super

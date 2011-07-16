@@ -1,7 +1,7 @@
 class Protoadmin::Navigation
 
   cattr_accessor :structure
-  @@structure = ActiveSupport::OrderedHash.new
+  @@structure = ActiveSupport::OrderedHash.new # using this to retain support for ruby 1.8.7
 
   class << self
 

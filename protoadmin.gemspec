@@ -48,6 +48,7 @@ Gem::Specification.new do |s|
     "app/views/layouts/protoadmin/_primary_content.html.haml",
     "app/views/layouts/protoadmin/_primary_control.html.haml",
     "config/engine.rb",
+    "config/initializers/protoadmin.rb",
     "config/locales/en.rb",
     "config/locales/en.yml",
     "config/routes.rb",
