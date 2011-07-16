@@ -1,4 +1,9 @@
-require File.expand_path('../boot', __FILE__)
+require 'rubygems'
+
+# Set up gems listed in the Gemfile.
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
+
+require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 require 'rails/all'
 
@@ -50,5 +55,14 @@ module Protoadmin
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
+    # Enable parameter wrapping for JSON. You can disable this by setting :format to an empty array.
+    ActionController::Base.wrap_parameters :format => [:json]
+
+    # Disable root element in JSON by default.
+    if defined?(ActiveRecord)
+      ActiveRecord::Base.include_root_in_json = false
+    end
+
   end
 end
