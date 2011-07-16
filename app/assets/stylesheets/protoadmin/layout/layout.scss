@@ -1,7 +1,7 @@
 /* Mixins
  *---------------------------------------------------------------------------*/
-$primary_color: #FFF;
-$secondary_color: #000;
+$primary_color: #09F;
+$primary_color_highlight: #6CC4FF;
 
 /* Turns off the ability to create a selection */
 @mixin no-selection {
@@ -107,6 +107,11 @@ hr {
       &:hover {
         text-decoration: underline;
       }
+      &:focus {
+        outline: 0;
+        color: $primary_color;
+        text-shadow: 0 1px 0 #FFF, 0 0 4px $primary_color_highlight;
+      }
     }
   }
   /* Breadcrumbs */
@@ -140,11 +145,17 @@ hr {
       &:hover {
         color: #111;
       }
+      &:focus {
+        outline: 0;
+        color: $primary_color;
+        text-shadow: 0 1px 0 #FFF, 0 0 4px $primary_color_highlight;
+      }
       &:last-child {
         cursor: default;
         padding-right: 0;
         background: none;
         color: #999;
+        text-shadow: 0 1px 0 #FFF;
       }
     }
   }
@@ -180,6 +191,12 @@ hr {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       background: #FFF url(/assets/protoadmin/quick-search-background.png) 5px 50% no-repeat;
+      &:focus {
+        border: 1px solid $primary_color;
+        -webkit-box-shadow: inset 0 2px 2px #CCC, 0 0 5px $primary_color;
+        -moz-box-shadow: inset 0 2px 2px #CCC, 0 0 5px $primary_color;
+        box-shadow: inset 0 2px 2px #CCC, 0 0 5px $primary_color;
+      }
     }
   }
   #primary_navigation ul {
@@ -210,6 +227,11 @@ hr {
           text-decoration: none;
           &:hover {
             text-decoration: underline;
+          }
+          &:focus {
+            outline: none;
+            color: $primary_color;
+            text-shadow: 0 1px 0 #FFF, 0 0 4px $primary_color_highlight;
           }
         }
         span {
@@ -256,6 +278,11 @@ hr {
     text-decoration: none;
     &:hover {
       text-decoration: underline;
+    }
+    &:focus {
+      outline: none;
+      color: $primary_color;
+      text-shadow: 0 1px 0 #FFF, 0 0 4px $primary_color_highlight;
     }
   }
 }
