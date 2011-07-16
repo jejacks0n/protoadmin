@@ -44,11 +44,12 @@ hr {
 
 /* Site Title, Section Title, and additional controls
  *---------------------------------------------------------------------------*/
-#primary_bar {
+#primary_title_bar {
   @include no-selection;
   height: 55px;
   background: #000 url(/assets/protoadmin/primary-bar-background.png) repeat-x;
   color: #FFF;
+  cursor: default;
   h1, h2 {
     margin: 0;
     height: 55px;
@@ -56,6 +57,8 @@ hr {
     font: normal 300 normal 2.1em/52px 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', sans-serif;
     letter-spacing: 0.4px;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   /* Site Title */
   h1 {
@@ -75,18 +78,21 @@ hr {
 
 /* User Information and Breadcrumbs
  *---------------------------------------------------------------------------*/
-#secondary_bar {
+#secondary_title_bar {
   @include no-selection;
   height: 38px;
   background: url(/assets/protoadmin/secondary-bar-background.png) repeat-x;
   color: #666;
   text-shadow: 0 1px 0 #FFF;
+  cursor: default;
   h3, h4 {
     margin: 0;
     height: 38px;
     padding: 0 20px;
     white-space: nowrap;
     font: normal bold normal 1em/normal 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   /* User Info */
   h3 {
@@ -109,7 +115,8 @@ hr {
     right: 0;
     left: 278px;
     background: url(/assets/protoadmin/secondary-bar-separator.png) no-repeat;
-    #breadcrumbs {
+    span {
+      display: block;
       float: left;
       height: 23px;
       margin: 4px 0;
@@ -145,22 +152,23 @@ hr {
 
 /* Quick Search and Navigation
  *---------------------------------------------------------------------------*/
-#control {
+#primary_control {
   @include no-selection;
   float: left;
   width: 240px;
+  margin-top: -5px;
   padding: 0 20px;
+  cursor: default;
   hr {
-    margin: 10px -18px 10px -20px;
+    margin: 0 -18px 0 -20px;
   }
   form#quick_search {
     display: block;
-    margin: 10px 0 0 0;
-    padding: 0 0 5px 0;
     input {
-      padding: 5px 10px 5px 25px;
-      box-sizing: border-box;
+      margin: 15px 0;
       width: 100%;
+      box-sizing: border-box;
+      padding: 5px 10px 5px 25px;
       outline: none;
       border: 1px solid #BBB;
       -webkit-border-radius: 20px;
@@ -174,9 +182,9 @@ hr {
       background: #FFF url(/assets/protoadmin/quick-search-background.png) 5px 50% no-repeat;
     }
   }
-  ul#primary_navigation {
-    margin: 0 0 10px 0;
-    padding: 0;
+  #primary_navigation ul {
+    margin: 0;
+    padding: 10px 0 0 0;
     list-style: none;
     text-shadow: 0 1px 0 #FFF;
     li {
@@ -206,7 +214,6 @@ hr {
         }
         span {
           display: inline;
-          cursor: default;
           background: none;
           text-transform: none;
           font-weight: normal;
@@ -218,7 +225,7 @@ hr {
 
 /* Primary Content Area
  *---------------------------------------------------------------------------*/
-#content {
+#primary_content {
   position: absolute;
   right: 0;
   left: 278px;
@@ -227,7 +234,7 @@ hr {
 
 /* Additional Info, Copyright, and MediaLoot link
  *---------------------------------------------------------------------------*/
-#info {
+#additional_info {
   @include no-selection;
   width: 240px;
   float: left;
@@ -235,6 +242,7 @@ hr {
   padding: 5px 20px;
   color: #666;
   text-shadow: 0 1px 0 #FFF;
+  cursor: default;
   hr {
     margin: 10px -18px 15px -20px;
   }

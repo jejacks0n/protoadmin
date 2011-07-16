@@ -1,0 +1,9 @@
+%form#quick_search
+  %input{:type => 'text', :placeholder => 'Quick Search'}
+  %hr
+#primary_navigation
+  - semantic_navigation :navigation do |n|
+    - Protoadmin::Navigation.structure.each do |group|
+      = n.group group[0], group[1][:options] do
+        - group[1][:items].each do |item|
+          = n.item item[0], item[1]

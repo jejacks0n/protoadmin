@@ -1,42 +1,20 @@
 !!!
 %html
   %head
-    %title Site Title
-    = stylesheet_link_tag "protoadmin"
-    = javascript_include_tag "protoadmin"
+    %title= page_title
     = csrf_meta_tags
+    = stylesheet_link_tag 'protoadmin'
+    = javascript_include_tag 'protoadmin'
   %body
 
-    #primary_bar
-      %h1 Site Title
-      %h2 Section Title
+    #primary_title_bar
+      %h1= site_title
+      %h2= section_title
 
-    #secondary_bar
-      %h3 John Doe (#{link_to '3 Messages', '#'})
-      %h4
-        #breadcrumbs
-          = link_to 'Bread', '#'
-          = link_to 'Crumb', '#'
-          = link_to 'Path', '#'
+    #secondary_title_bar
+      %h3= user_information
+      %h4= breadcrumbs
 
-    #control
-      %form#quick_search
-        %input{ :type => 'text', :placeholder => 'Quick Search' }
-        %hr
-      - semantic_navigation :primary_navigation do |n|
-        - Protoadmin::Navigation.structure.each do |group|
-          = n.group group[0], group[1][:options] do
-            - group[1][:items].each do |item|
-              = n.item item[0], item[1]
-
-    #content
-      = yield
-
-    #info
-      %hr
-      %h5 Copyright &copy; 2011 Site Title
-      %span Theme by #{link_to 'MediaLoot', 'http://www.medialoot.com/', :target => '_blank'}
-
-:plain
-  <style>
-  </style>
+    #primary_control= render 'layouts/protoadmin/primary_control'
+    #primary_content= render 'layouts/protoadmin/primary_content'
+    #additional_info= render 'layouts/protoadmin/additional_info'
