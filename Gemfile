@@ -12,6 +12,7 @@ gem 'uglifier'
 # Additional UI gems
 gem 'formtastic', '~> 2.0.rc3'
 gem 'navigasmic'
+gem 'responders'
 
 group :development, :test do
   gem 'thin'
