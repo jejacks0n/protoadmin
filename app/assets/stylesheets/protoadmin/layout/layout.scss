@@ -1,9 +1,9 @@
-/* Mixins
+/* Mixins -- todo: why don't this get imported properly??
  *---------------------------------------------------------------------------*/
 $primary_color: #09F;
 $primary_color_highlight: #6CC4FF;
 
-/* Turns off the ability to create a selection */
+/* no-slection: Turns off the ability to create a selection */
 @mixin no-selection {
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -12,7 +12,7 @@ $primary_color_highlight: #6CC4FF;
   user-select: none;
 }
 
-/* Clearfix is used for containers that have all children floating */
+/* clearfix: Clearfix is used for containers that have all children floating */
 @mixin clearfix {
   &:after {
   	content: '\00a0';
@@ -24,6 +24,10 @@ $primary_color_highlight: #6CC4FF;
     overflow: hidden;
   }
 }
+/*---------------------------------------------------------------------------*/
+
+
+
 
 /* Basic Elements
  *---------------------------------------------------------------------------*/
@@ -47,6 +51,7 @@ hr {
 #primary_title_bar {
   @include no-selection;
   height: 55px;
+  min-width: 618px;
   background: #000 url(/assets/protoadmin/primary-bar-background.png) repeat-x;
   color: #FFF;
   cursor: default;
@@ -81,6 +86,7 @@ hr {
 #secondary_title_bar {
   @include no-selection;
   height: 38px;
+  min-width: 618px;
   background: url(/assets/protoadmin/secondary-bar-background.png) repeat-x;
   color: #666;
   text-shadow: 0 1px 0 #FFF;
@@ -88,6 +94,7 @@ hr {
   h3, h4 {
     margin: 0;
     height: 38px;
+    min-width: 300px;
     padding: 0 20px;
     white-space: nowrap;
     font: normal bold normal 1em/normal 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
@@ -251,7 +258,9 @@ hr {
   position: absolute;
   right: 0;
   left: 278px;
+  margin-top: -5px;
   padding: 20px;
+  min-width: 300px;
 }
 
 /* Additional Info, Copyright, and MediaLoot link

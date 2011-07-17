@@ -1,0 +1,170 @@
+/* Mixins -- todo: why don't this get imported properly??
+ *---------------------------------------------------------------------------*/
+$primary_color: #09F;
+$primary_color_highlight: #6CC4FF;
+
+/* no-slection: Turns off the ability to create a selection */
+@mixin no-selection {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* clearfix: Clearfix is used for containers that have all children floating */
+@mixin clearfix {
+  &:after {
+  	content: '\00a0';
+  	display: block;
+  	clear: both;
+  	visibility: hidden;
+  	line-height: 0;
+  	height: 0;
+    overflow: hidden;
+  }
+}
+/*---------------------------------------------------------------------------*/
+
+
+.content {
+  color: #444;
+}
+
+
+/* Inline Styles
+ *---------------------------------------------------------------------------*/
+.content {
+  a {
+    color: $primary_color;
+  }
+}
+
+
+/* Block Styles - Header Types
+ *---------------------------------------------------------------------------*/
+.content {
+  h1, h2, h3, h4, h5, h6 {
+    color: #000;
+  }
+  h1 {
+    font-size: 2em;
+    border-bottom: 3px solid #CCC;
+  }
+  h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #CCC;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+  h5 {
+    font-size: 1.2em;
+  }
+  h6 {
+    font-size: 1em;
+  }
+  hr {
+    border: 0;
+    border-top: 1px solid #DDD;
+  }
+}
+
+/* Block Styles - Block Types
+ *---------------------------------------------------------------------------*/
+.content {
+  pre {
+    padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 1px 4px #CCC;
+    -moz-box-shadow: inset 0 1px 4px #CCC;
+    box-shadow: inset 0 1px 4px #CCC;
+    background: #EEE;
+    overflow: auto;
+  }
+}
+
+/* Block Styles - Tables
+ *---------------------------------------------------------------------------*/
+.content {
+  table {
+    border-spacing: 0;
+    td {
+      padding: 5px;
+      border-bottom: 1px solid #CCC;
+    }
+    thead {
+      th {
+        padding: 10px 5px;
+        color: #333;
+        border-bottom: 2px solid #CCC;
+        text-align: left;
+      }
+    }
+    tfoot {
+      th {
+        padding: 5px;
+        font-weight: normal;
+        text-align: left;
+      }
+    }
+  }
+}
+
+/* Block Styles - Lists
+ *---------------------------------------------------------------------------*/
+.content {
+  ul {
+    list-style: disc;
+    margin-left: 0;
+    padding-left: 15px;
+  }
+  ol {
+    margin-left: 0;
+    padding-left: 15px;
+    ol {
+      list-style: lower-alpha;
+      ol {
+        list-style: lower-roman;
+      }
+    }
+  }
+}
+
+/* Block Styles - Definition Lists
+ *---------------------------------------------------------------------------*/
+.content {
+  dl {
+    margin: 0;
+    padding: 0 10px 10px 0;
+    width: 30%;
+    background: #EEE;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    dt {
+      @include clearfix;
+      width: 100%;
+      height: 20px;
+      margin-top: 10px;
+      margin-bottom: -20px;
+      font-size: 1.1em;
+      text-align: right;
+    }
+    dd {
+      display: block;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0 0 0 100%;
+      padding-left: 20px;
+      width: 228%;
+    }
+  }
+}
+

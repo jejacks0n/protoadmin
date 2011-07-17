@@ -10,5 +10,5 @@ en:
       update:
         success: '%{resource_name} was successfully updated.'
       destroy:
-        success: '%{resource_name} was successfully destroyed.'
-        error: '%{resource_name} could not be destroyed.'
+        success: '%{resource_name} was successfully deleted.'
+        error: '%{resource_name} could not be deleted.'
