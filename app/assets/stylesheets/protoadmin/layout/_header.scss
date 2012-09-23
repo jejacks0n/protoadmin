@@ -1,0 +1,18 @@
+#header {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  h1 {
+    position: relative;
+    line-height: 77px;
+    width: 191px;
+    margin: 0;
+    font-weight: 100;
+    font-size: 1.7em;
+    text-align: center;
+    letter-spacing: 1px;
+    a {
+      text-decoration: none;
+    }
+  }
+}

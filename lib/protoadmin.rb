@@ -1,1 +1,8 @@
-require File.expand_path('../config/engine', File.dirname(__FILE__))
+require 'haml-rails'
+require 'bootstrap-sass'
+require 'jquery-rails'
+require 'font-awesome-sass-rails'
+require 'navigasmic'
+
+require 'protoadmin/version'
+require 'protoadmin/rails'

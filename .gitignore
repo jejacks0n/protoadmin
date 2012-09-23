@@ -1,5 +1,21 @@
+# General
 .bundle
-db/*.sqlite3
-log/*.log
+.rvmrc
+.powenv
+
+# Local config files
+Gemfile.lock
+.rvmrc
+
+# Build files
+distro/build
+pkg/
+
+# Tempfiles
 tmp/
-.sass-cache/
+coverage
+capybara*
+
+# Dummy app
+spec/dummy/log
+spec/dummy/db/*.sqlite3

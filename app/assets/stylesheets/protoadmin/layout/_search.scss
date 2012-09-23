@@ -1,0 +1,31 @@
+#search {
+  position: absolute;
+  z-index: 2;
+  top: 6px;
+  left: 230px;
+  height: 27px;
+  box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.7) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+  @include border-radius(4px);
+  input {
+    width: 115px;
+    padding: 2px 0px 5px 10px;
+    border: 0;
+    margin: 0;
+    background: transparent;
+    font-size: 0.9em;
+    @include box-shadow(none);
+  }
+  button {
+    border: 0;
+    padding: 3px 10px 4px;
+    background: transparent;
+    opacity: 0.5;
+    outline: 0;
+    &:hover, &:active, &:focus {
+      opacity: 0.8;
+    }
+    i {
+      line-height: 22px;
+    }
+  }
+}

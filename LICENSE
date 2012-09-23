@@ -1,11 +1,9 @@
-ProtoAdmin is a Rails 3.1 interface for admin style management tools.
-The interface is derived from a template available from
-http://medialoot.com/.
+Protoadmin is a Rails 3 interface for admin style management tools.
 
 Documentation and other useful information can be found at
 https://github.com/jejacks0n/protoadmin
 
-Copyright (c) 2011 Jeremy Jackson
+Copyright (c) 2012 Jeremy Jackson
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

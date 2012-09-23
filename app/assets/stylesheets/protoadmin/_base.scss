@@ -1,0 +1,83 @@
+@import 'bootstrap';
+@import 'bootstrap-responsive';
+@import 'font-awesome';
+
+@import 'protoadmin/layout/header';
+@import 'protoadmin/layout/search';
+@import 'protoadmin/layout/user_nav';
+@import 'protoadmin/layout/main_nav';
+@import 'protoadmin/layout/content';
+
+@import 'protoadmin/themes/default';
+
+@media (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+  #header h1 {
+    top: -18px;
+    left: 18px;
+  }
+  #search {
+    display: none;
+  }
+  #user_nav > ul > li > a .text {
+    display: none;
+  }
+  #main_nav {
+    > ul > li > a .text {
+      display: none;
+    }
+    > ul {
+      width: 40px;
+      ul {
+        position: absolute;
+        left: 40px;
+        margin-top: -42px;
+        opacity: 0.9;
+      }
+    }
+  }
+  #content {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  #header {
+    height: 40px;
+    h1 {
+      left: 6px;
+      text-align: left;
+    }
+  }
+  #user_nav {
+    right: -4px;
+  }
+  #main_nav {
+    position: relative;
+    width: 100%;
+    > ul > li > a .text {
+      display: inline;
+    }
+    > ul {
+      position: absolute;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      margin-top: 0;
+      border-top: 0;
+      border-bottom: 0;
+      ul {
+        position: relative;
+        left: 0;
+        width: 100%;
+        margin-top: 0;
+        opacity: 1;
+      }
+    }
+  }
+  #content {
+    margin: 0;
+    border-radius: 0;
+  }
+}

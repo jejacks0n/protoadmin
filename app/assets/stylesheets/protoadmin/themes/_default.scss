@@ -1,0 +1,100 @@
+body {
+  background: #444;
+}
+
+#header {
+  border-bottom: 1px solid #555;
+  @include box-shadow(0 1px 0 #333);
+  @include gradient-vertical(#3F3F3F, #222);
+  h1 a {
+    color: #eee;
+  }
+}
+
+#search {
+  background-color: #222;
+  input {
+    color: #888;
+    &:focus {
+      color: #aaa;
+    }
+  }
+  button {
+    color: #fff;
+  }
+}
+
+#user_nav {
+  > ul > li > a {
+    color: #999;
+    &:hover {
+      color: #fff;
+    }
+    i {
+      color: #fff;
+    }
+    .caret {
+      border-top-color: #999;
+      border-bottom-color: #999;
+    }
+  }
+}
+
+#main_nav {
+  > ul {
+    background: #444;
+    border-top: 1px solid #393939;
+    border-bottom: 1px solid #4E4E4E;
+    > li {
+      border-top: 1px solid #4E4E4E;
+      border-bottom: 1px solid #393939;
+      > a {
+        color: #AAA;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+      }
+      > a:hover {
+        background-color: #4A4A4A;
+      }
+      i {
+      }
+      .label {
+        background-color: #333;
+      }
+    }
+    > li.active {
+      background-color: #3a3a3a;
+      @include gradient-vertical(#333, #3F3F3F);
+      &:after {
+        color: #eee;
+      }
+      a {
+        background: transparent;
+      }
+    }
+    ul {
+      background-color: #2A2A2A;
+      li a {
+        color: #777;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #202020;
+      }
+      li.active:after {
+        color: #eee;
+      }
+      li:hover a, li.active a {
+        color: #ccc;
+        background-color: #272727;
+      }
+    }
+  }
+}
+
+#content {
+  background: #eee;
+  background-image: -webkit-gradient(linear, 0 0, 0 80px, from(#fff), to(#eee));
+  background-image: -webkit-linear-gradient(top, #fff 0, #eee 80px);
+  background-image: -moz-linear-gradient(top, #fff 0, #eee 80px);
+  background-image: -ms-linear-gradient(top, #fff 0, #eee 80px);
+  background-image: -o-linear-gradient(top, #fff 0, #eee 80px);
+  background-image: linear-gradient(top, #fff 0, #eee 80px);
+}

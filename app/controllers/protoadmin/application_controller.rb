@@ -4,6 +4,4 @@ class Protoadmin::ApplicationController < ActionController::Base
 
   layout 'protoadmin'
 
-  self.responder = Protoadmin::Responder
-
 end

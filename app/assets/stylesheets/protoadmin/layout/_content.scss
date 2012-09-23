@@ -1,0 +1,17 @@
+#content {
+  position: relative;
+  z-index: 3;
+  width: auto;
+  min-height: 500px;
+  margin: -37px 0 -37px 220px;
+  border-top-left-radius: 8px;
+  h1 {
+    white-space: nowrap;
+    font-size: 28px;
+    font-weight: normal;
+    text-shadow: 0 1px 0 white;
+    margin: 0 20px;
+    padding: 20px 0;
+    color: #555;
+  }
+}

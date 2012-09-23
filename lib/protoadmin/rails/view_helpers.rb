@@ -1,0 +1,3 @@
+module Protoadmin::ViewHelpers
+
+end

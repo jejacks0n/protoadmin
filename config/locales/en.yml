@@ -1,14 +1,7 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  site_title: 'ProtoAdmin'
-  flash:
-    actions:
-      create:
-        success: '%{resource_name} was successfully created.'
-      update:
-        success: '%{resource_name} was successfully updated.'
-      destroy:
-        success: '%{resource_name} was successfully deleted.'
-        error: '%{resource_name} could not be deleted.'
+  protoadmin:
+    site_title: Protoadmin
+    user_nav:
+      profile: Profile
+      settings: Settings
+      sign_out: Sign Out
