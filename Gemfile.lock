@@ -10,12 +10,6 @@ PATH
       rails (~> 3.2.8)
       sass-rails
 
-PATH
-  remote: ../navigasmic
-  specs:
-    navigasmic (1.0.1)
-      railties (~> 3.2)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -101,6 +95,8 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.3.6)
+    navigasmic (1.0.1)
+      railties (~> 3.2)
     nokogiri (1.5.5)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -177,7 +173,6 @@ PLATFORMS
 
 DEPENDENCIES
   evergreen (>= 1.0.0)
-  navigasmic!
   protoadmin!
   rails (= 3.2.8)
   rspec-rails
