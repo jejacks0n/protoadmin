@@ -38,7 +38,7 @@ require 'evergreen/tasks'
 
 # Default
 # -----------------------------------------------------------------------------
-Rake::Task['default'].prerequisites.clear
-Rake::Task['default'].clear
+#Rake::Task['default'].prerequisites.clear
+#Rake::Task['default'].clear
 
-task :default => [:spec, 'spec:javascripts']
+task :default => ['spec:javascripts']
