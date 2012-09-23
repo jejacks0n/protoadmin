@@ -9,8 +9,17 @@ generators.
 
 I've been doing this for a long time now, and I wanted a gem that I could drop into my next Rails project and have it
 ready to go.  The intention of this project isn't to provide a one size fits all sort of thing, and is more about
-providing a good starting point that I like.  I don't expect everyone to agree on what I use.
+providing a good starting point that I like and is mobile friendly.  I don't expect everyone to agree on what I use.
 
+I've chosen several libraries that I think are great.  Here's a short list of libraries that are being utilized:
+
+- Haml
+- Sass
+- CoffeeScript
+- jQuery
+- Twitter Bootstrap (bootstap-sass)
+- Font Awesome
+- Navigasmic
 
 ## Installation
 
