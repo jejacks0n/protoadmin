@@ -1,5 +1,9 @@
 # Protoadmin
 
+[![Build Status](https://secure.travis-ci.org/jejacks0n/protoadmin.png)](http://travis-ci.org/jejacks0n/protoadmin)
+[![Dependency Status](https://gemnasium.com/jejacks0n/protoadmin.png)](https://gemnasium.com/jejacks0n/protoadmin)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/jejacks0n/protoadmin)
+
 ProtoAdmin is a Rails 3 interface for admin style management tools.  It's a collection of css, javascript, and view
 helpers that help with common interface patterns that I've used / seen used over the years.  It also includes
 generators.
@@ -20,6 +24,7 @@ I've chosen several libraries that I think are great.  Here's a short list of li
 - Twitter Bootstrap (bootstap-sass)
 - Font Awesome
 - Navigasmic
+
 
 ## Installation
 
