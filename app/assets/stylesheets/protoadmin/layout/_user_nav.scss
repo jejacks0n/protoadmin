@@ -3,6 +3,7 @@
   z-index: 5;
   right: 15px;
   top: 6px;
+  @include user-select(none);
   li {
     text-align: left;
     text-shadow: none;

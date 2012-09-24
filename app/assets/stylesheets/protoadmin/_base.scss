@@ -32,9 +32,18 @@
       width: 40px;
       ul {
         position: absolute;
-        left: 40px;
+        left: 45px;
         margin-top: -42px;
         opacity: 0.9;
+        @include border-radius(5px);
+        li a {
+          padding: 2px 10px;
+          border: 0;
+          margin: 4px;
+          &:hover {
+            color: #fff;
+          }
+        }
       }
     }
   }
@@ -52,11 +61,14 @@
     }
   }
   #user_nav {
-    right: -4px;
+    right: 45px;
   }
   #main_nav {
     position: relative;
     width: 100%;
+    > .btn {
+      display: block;
+    }
     > ul > li > a .text {
       display: inline;
     }
@@ -64,9 +76,15 @@
       position: absolute;
       box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
       width: 100%;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
       margin-top: 0;
       border-top: 0;
       border-bottom: 0;
+      > li.active:after {
+        content: '';
+      }
       ul {
         position: relative;
         left: 0;
@@ -74,6 +92,10 @@
         margin-top: 0;
         opacity: 1;
       }
+    }
+    > ul.open {
+      opacity: 1;
+      //display: block;
     }
   }
   #content {

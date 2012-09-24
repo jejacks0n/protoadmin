@@ -1,10 +1,10 @@
 Navigasmic.setup do |config|
 
   config.semantic_navigation :protoadmin_main_nav do |n|
-    n.item 'Dashboard', '/posts', icon: 'home'
+    n.item 'Dashboard', '/', icon: 'home'
     n.group 'Form Elements<span class="label">3</span>', icon: 'th-list', id: 'form_elements_nav' do
-      n.item 'Common Elements', '/posts'
-      n.item 'Validation', '#'
+      n.item 'Common Elements', '#'
+      n.item 'Validation', '/posts'
       n.item 'Wizard', '#'
     end
     n.item 'Buttons &amp; Icons', '#', icon: 'tint'
@@ -15,18 +15,12 @@ Navigasmic.setup do |config|
 
   config.semantic_navigation :protoadmin_user_nav do |n|
     n.item n.t('protoadmin.user_nav.profile'), '#', class: 'btn btn-inverse', icon: 'user'
-    n.group 'Messages', class: 'btn btn-inverse', icon: 'cog' do
-      n.item "testing", '/foo'
-    end
     n.item n.t('protoadmin.user_nav.settings'), '#', class: 'btn btn-inverse', icon: 'cog'
     n.item n.t('protoadmin.user_nav.sign_out'), '#', class: 'btn btn-inverse', icon: 'share-alt'
   end
 
   config.builder main_nav: Navigasmic::Builder::ListBuilder do |builder|
     builder.wrapper_class = 'nav nav-list'
-    builder.has_nested_class = 'subnav'
-    builder.has_nested_class = ''
-    builder.is_nested_class = 'collapse'
 
     builder.label_generator = proc do |label, options, has_link, has_nested|
       if !has_nested || has_link
@@ -34,7 +28,6 @@ Navigasmic.setup do |config|
         options.has_key?(:icon) ? "<i class='icon icon-#{options.delete(:icon)}'></i>#{label}".html_safe : label
       else
         icon = options.has_key?(:icon) ? "<i class='icon icon-#{options.delete(:icon)}'></i>".html_safe : ''
-        (options[:data] ||= {}).merge!(toggle: 'collapse', target: "##{options[:id]} > ul.collapse")
         link_to("#{icon}<span class='text'>#{label}</span>".html_safe, 'javascript:void(0)', class: 'subnav')
       end
     end
@@ -50,7 +43,7 @@ Navigasmic.setup do |config|
   end
 
   config.builder user_nav: Navigasmic::Builder::ListBuilder do |builder|
-    builder.wrapper_class = 'btn-group'
+    builder.wrapper_class = 'nav btn-group'
     builder.has_nested_class = 'dropdown'
     builder.is_nested_class = 'dropdown-menu'
 

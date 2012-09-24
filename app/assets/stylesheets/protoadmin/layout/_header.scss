@@ -13,6 +13,7 @@
     letter-spacing: 1px;
     a {
       text-decoration: none;
+      @include user-select(none);
     }
   }
 }
