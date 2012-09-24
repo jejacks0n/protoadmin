@@ -1,0 +1,57 @@
+body.sign-in {
+  #header h1 {
+    width: 100%;
+  }
+}
+
+#sign_in {
+  width: 350px;
+  margin: 45px auto 0;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  h2 {
+    font-weight: 400;
+    margin-top: 0;
+  }
+  form {
+    margin-bottom: 0;
+  }
+  .form-inputs {
+    .control-group {
+      margin: 20px 0;
+    }
+    input[type="password"], input[type="text"] {
+      width: 297px;
+      height: 30px;
+      font-size: 20px;
+    }
+    .input-append .add-on, .input-prepend .add-on {
+      height: 30px;
+      line-height: 37px;
+      font-size: 20px;
+      width: 30px;
+    }
+  }
+  .form-actions {
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+    @include clearfix();
+    .control-group {
+      padding-top: 11px;
+      float: left;
+    }
+    .btn {
+      float: right;
+    }
+    .links {
+      text-align: left;
+      padding-top: 11px;
+    }
+  }
+  .links {
+    text-align: center;
+  }
+}

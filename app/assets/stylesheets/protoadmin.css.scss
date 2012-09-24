@@ -1,1 +1,26 @@
-@import 'protoadmin/base';
+// base theme color
+$linkColor: #3ACBE9 !default;
+
+// base bootstrap / font awesome
+@import 'bootstrap';
+@import 'font-awesome';
+
+// layout
+@import 'protoadmin/layout/sign_in';
+@import 'protoadmin/layout/header';
+@import 'protoadmin/layout/search';
+@import 'protoadmin/layout/user_nav';
+@import 'protoadmin/layout/main_nav';
+@import 'protoadmin/layout/content';
+
+// theme
+@import 'protoadmin/themes/default';
+
+// responsive
+@import 'bootstrap-responsive';
+@import 'protoadmin/responsive';
+
+// fix user styles
+input {
+  box-sizing: content-box;
+}

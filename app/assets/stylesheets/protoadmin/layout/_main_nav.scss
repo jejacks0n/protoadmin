@@ -2,6 +2,7 @@
   position: absolute;
   z-index: 4;
   width: 220px;
+  @include user-select(none);
   > .btn {
     position: absolute;
     right: 5px;

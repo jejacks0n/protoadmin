@@ -1,0 +1,13 @@
+%html
+  %head
+    %title= t('protoadmin.site_title')
+    %meta{ charset: "UTF-8" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    = csrf_meta_tags
+    = stylesheet_link_tag 'protoadmin'
+    = javascript_include_tag 'protoadmin'
+  %body.sign-in
+
+    = render partial: 'layouts/protoadmin/layout/header'
+
+    #sign_in= yield

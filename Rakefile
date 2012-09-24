@@ -12,6 +12,12 @@ APP_RAKEFILE = File.expand_path("../spec/dummy/Rakefile", __FILE__)
 load 'rails/tasks/engine.rake'
 Bundler::GemHelper.install_tasks
 
+Rake::Task['app:db:load_config'].clear
+task 'app:db:load_config' do
+  ActiveRecord::Base.configurations = Rails.application.config.database_configuration
+  ActiveRecord::Migrator.migrations_paths = Rails.application.paths['db/migrate'].to_a
+end
+
 
 # RSpec
 # -----------------------------------------------------------------------------

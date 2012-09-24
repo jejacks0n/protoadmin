@@ -24,6 +24,8 @@ I've chosen several libraries that I think are great.  Here's a short list of li
 - Twitter Bootstrap (bootstap-sass)
 - Font Awesome
 - Navigasmic
+- Devise (with admin resource)
+- Simple form (with bootstrap initializer)
 
 
 ## Installation

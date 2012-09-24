@@ -1,5 +1,15 @@
+::selection {
+  background: $linkColor;
+}
+::-moz-selection {
+  background: $linkColor;
+}
+
 body {
   background: #444;
+}
+body.sign-in {
+  background: #eee;
 }
 
 #header {
@@ -97,4 +107,8 @@ body {
   background-image: -ms-linear-gradient(top, #fff 0, #eee 80px);
   background-image: -o-linear-gradient(top, #fff 0, #eee 80px);
   background-image: linear-gradient(top, #fff 0, #eee 80px);
+}
+
+#sign_in {
+  background: #fff;
 }

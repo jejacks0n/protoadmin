@@ -3,6 +3,8 @@ require 'rails'
 module Protoadmin
   class Engine < ::Rails::Engine
 
+    engine_name 'protoadmin'
+
     initializer 'protoadmin.view_helpers' do
       ActionView::Base.send :include, ViewHelpers
     end
