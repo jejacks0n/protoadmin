@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   body {
     padding: 0;
   }
@@ -88,5 +88,19 @@
   #content {
     margin: 0;
     border-radius: 0;
+  }
+  #sign_in {
+    padding: 10;
+    margin-top: 0;
+    width: 100%;
+    //background: transparent;
+    @include box-shadow(0 0 6px rgba(0, 0, 0, 0.6) inset);
+    @include box-sizing(border-box);
+    @include border-radius(0);
+    .form-inputs {
+      input[type="text"], input[type="email"], input[type="password"] {
+        width: 82%;
+      }
+    }
   }
 }

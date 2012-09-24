@@ -8,8 +8,8 @@ body.sign-in {
   width: 350px;
   margin: 45px auto 0;
   padding: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  @include border-radius(10px);
+  @include box-shadow(0 0 10px rgba(0, 0, 0, 0.2));
   h2 {
     font-weight: 400;
     margin-top: 0;

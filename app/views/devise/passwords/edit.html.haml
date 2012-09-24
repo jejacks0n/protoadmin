@@ -6,10 +6,14 @@
   = f.full_error :reset_password_token
 
   .form-inputs
-    = f.input :password, label: "New password", required: true
-    = f.input :password_confirmation, label: "Confirm your new password", required: true
+    = f.input :password, label: false, required: false, autofocus: true, wrapper: :prepend do
+      <span class="add-on"><i class="icon-key"></i></span>
+      = f.input_field :password, placeholder: 'New Password'
+    = f.input :password_confirmation, label: false, required: false, autofocus: true, wrapper: :prepend do
+      <span class="add-on"><i class="icon-check"></i></span>
+      = f.input_field :password_confirmation, placeholder: 'Password Confirmation'
 
   .form-actions
-    = f.button :submit, "Change my password"
+    = f.button :submit, "Change my password", class: 'btn-inverse btn-large'
+    = render 'devise/shared/links'
 
-= render 'devise/shared/links'
