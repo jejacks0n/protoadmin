@@ -4,6 +4,9 @@ module Protoadmin
   class Configuration
     include Singleton
 
+    cattr_accessor :theme
+    @@theme = :light
+
     cattr_accessor :layout
     @@layout = [:header, :search, :user_nav, :main_nav, :content]
   end

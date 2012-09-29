@@ -1,5 +1,6 @@
 Protoadmin.setup do |config|
 
+  config.theme = :bootstrap
   config.layout  = [:search, :user_nav, :main_nav, :content]
   #config.modules = [:header, :search, :user_nav, :main_nav, :content]
 
