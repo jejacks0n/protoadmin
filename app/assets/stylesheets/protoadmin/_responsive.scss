@@ -1,6 +1,9 @@
-@media (max-width: 769px) {
+@media (max-width: 769px) and (min-width: 480px) {
   body {
     padding: 0;
+  }
+  .container-fluid {
+    padding: 0 20px;
   }
   #header h1 {
     top: -18px;
@@ -41,15 +44,28 @@
 }
 
 @media (max-width: 480px) {
+  body {
+    padding: 0;
+  }
+  .container-fluid {
+    padding: 0 10px;
+  }
   #header {
     height: 40px;
     h1 {
+      top: -18px;
       left: 6px;
       text-align: left;
     }
   }
+  #search {
+    display: none;
+  }
   #user_nav {
     right: 45px;
+    > ul > li > a .text {
+      display: none;
+    }
   }
   #main_nav {
     position: relative;
@@ -62,7 +78,7 @@
     }
     > ul {
       position: absolute;
-      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
       width: 100%;
       opacity: 0;
       height: 0;
@@ -87,13 +103,12 @@
   }
   #content {
     margin: 0;
-    border-radius: 0;
+    @include border-radius(5px);
   }
   #sign_in {
     padding: 10;
     margin-top: 0;
     width: 100%;
-    //background: transparent;
     @include box-shadow(0 0 6px rgba(0, 0, 0, 0.6) inset);
     @include box-sizing(border-box);
     @include border-radius(0);

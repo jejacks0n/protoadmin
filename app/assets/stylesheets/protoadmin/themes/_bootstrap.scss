@@ -1,0 +1,64 @@
+::selection {
+  background: $linkColor;
+}
+::-moz-selection {
+  background: $linkColor;
+}
+
+#search {
+  border: 1px solid #bbb;
+}
+
+#main_nav {
+  > ul > li.active:after {
+    width: 9px;
+    right: -1px;
+  }
+  > ul ul {
+    background: #f4f4f4;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2) inset;
+    > li.active a {
+      background: $linkColor;
+      color: #fff;
+    }
+    > li:first-child {
+      border-top: 1px solid #bbb;
+    }
+    > li:last-child {
+      border-bottom: 1px solid #bbb;
+    }
+    a:hover {
+      background: rgba(0, 0, 0, 0.04);
+    }
+  }
+}
+
+#content {
+  border: 1px solid #bbb;
+  border-bottom: 0;
+  border-right: 0;
+  margin-bottom: -1px;
+}
+
+@media (max-width: 769px) and (min-width: 480px) {
+  #main_nav {
+    > ul ul {
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.9);
+      background: #fff;
+      li:first-child, li:last-child {
+        border: 0;
+      }
+      a:hover {
+        background: $linkColor;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #main_nav > ul {
+    background: #fff;
+  }
+}
+

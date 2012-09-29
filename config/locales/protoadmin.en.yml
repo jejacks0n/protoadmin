@@ -5,3 +5,5 @@ en:
       profile: Profile
       settings: Settings
       sign_out: Sign Out
+    main_nav:
+      home: Home

@@ -46,11 +46,15 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
       &:after {
         position: absolute;
-        top: 14px;
-        right: -2px;
+        top: 8px;
+        right: 0;
+        width: 8px;
+        overflow: hidden;
         font-size: 30px;
+        line-height: 30px;
         font-family: 'FontAwesome';
         content: "\f0d9";
+        color: #fff;
       }
     }
     ul {
@@ -59,7 +63,6 @@
       height: 0;
       overflow: hidden;
       padding: 0;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset;
       li a {
         height: 21px;
         padding: 10px 0 10px 25px;

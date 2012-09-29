@@ -1,0 +1,20 @@
+#content
+  = render partial: '/protoadmin/modules/content_title'
+  = render partial: '/protoadmin/modules/breadcrumbs'
+  .container-fluid
+    = yield
+    .widget-box
+      .widget-title
+        %span.icon
+          %i.icon-signal
+        %h5 Site Statistics
+        .buttons
+          %a.btn.btn-mini{:href => "#"}
+            %i.icon-refresh
+            Update stats
+      .widget-content
+        .row-fluid
+          .span4
+            asdasdasdasd
+          .span8
+            asdasdasd

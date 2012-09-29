@@ -1,24 +1,5 @@
 Navigasmic.setup do |config|
 
-  config.semantic_navigation :protoadmin_main_nav do |n|
-    n.item 'Dashboard', proc{ protoadmin.root_path }, icon: 'home'
-    n.group 'Form Elements<span class="label">3</span>', icon: 'th-list', id: 'form_elements_nav' do
-      n.item 'Common Elements', '#'
-      n.item 'Validation', '/posts'
-      n.item 'Wizard', '#'
-    end
-    n.item 'Buttons &amp; Icons', '#', icon: 'tint'
-    n.item 'Interface Elements', '#', icon: 'pencil'
-    n.item 'Tables', '#', icon: 'th'
-    n.item 'Grid Layout', '#', icon: 'th-list'
-  end
-
-  config.semantic_navigation :protoadmin_user_nav do |n|
-    n.item n.t('protoadmin.user_nav.profile'), proc{ protoadmin.edit_admin_password_path }, class: 'btn btn-inverse', icon: 'user'
-    n.item n.t('protoadmin.user_nav.settings'), '#', class: 'btn btn-inverse', icon: 'cog'
-    n.item n.t('protoadmin.user_nav.sign_out'), proc{ protoadmin.destroy_admin_session_path }, class: 'btn btn-inverse', icon: 'share-alt'
-  end
-
   config.builder main_nav: Navigasmic::Builder::ListBuilder do |builder|
     builder.wrapper_class = 'nav nav-list'
 

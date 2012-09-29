@@ -7,5 +7,8 @@
 class @Protoadmin
 Protoadmin.Layout = {}
 
-# wait a sec and then tell everybody they can animate
-jQuery -> setTimeout((-> $('body').addClass('animated')), 200)
+jQuery ->
+  # wait a sec and then tell everybody they can animate
+  setTimeout((-> $('body').addClass('animated')), 200)
+  # make things have tooltips
+  $('[rel="tooltip"]').tooltip()

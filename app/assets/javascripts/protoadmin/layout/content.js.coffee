@@ -8,7 +8,7 @@ class Protoadmin.Layout.Content
     @bindEvents()
 
   build: ->
-    @top = @$el.offset().top
+    @top = @$el.offset().top - parseInt(@$el.css('margin-bottom'), 10) || 0
     @resize()
 
   bindEvents: ->

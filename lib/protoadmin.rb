@@ -8,3 +8,5 @@ require 'simple_form'
 
 require 'protoadmin/version'
 require 'protoadmin/rails'
+
+require 'protoadmin/core/configuration'

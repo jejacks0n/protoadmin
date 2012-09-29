@@ -8,8 +8,7 @@
     = stylesheet_link_tag 'protoadmin'
     = javascript_include_tag 'protoadmin'
   %body
-    = render partial: 'layouts/protoadmin/layout/header'
-    = render partial: 'layouts/protoadmin/layout/search'
-    = render partial: 'layouts/protoadmin/layout/user_nav'
-    = render partial: 'layouts/protoadmin/layout/main_nav'
-    #content= yield
+
+    = render partial: "/protoadmin/layout/header"
+    - Protoadmin.configuration.layout.each do |partial|
+      = render partial: "/protoadmin/layout/#{partial}"

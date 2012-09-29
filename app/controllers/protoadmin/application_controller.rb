@@ -16,14 +16,13 @@ class Protoadmin::ApplicationController < ActionController::Base
   def layout_for_devise_by_resource
     if devise_controller?
       if resource_name == :admin
-        'protoadmin_sign_in'
+        'protoadmin/devise'
       else
         'application'
       end
     else
-      'protoadmin'
+      'protoadmin/application'
     end
   end
-
 
 end

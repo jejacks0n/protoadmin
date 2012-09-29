@@ -1,5 +1,5 @@
-// base theme color
-$linkColor: #3ACBE9 !default;
+// base
+@import 'protoadmin/base';
 
 // base bootstrap / font awesome
 @import 'bootstrap';
@@ -13,14 +13,13 @@ $linkColor: #3ACBE9 !default;
 @import 'protoadmin/layout/main_nav';
 @import 'protoadmin/layout/content';
 
-// theme
-@import 'protoadmin/themes/default';
+// modules
+@import 'protoadmin/modules/breadcrumbs';
+@import 'protoadmin/modules/widget_box';
 
 // responsive
 @import 'bootstrap-responsive';
 @import 'protoadmin/responsive';
 
-// fix user styles
-input {
-  box-sizing: content-box;
-}
+// theme
+@import 'protoadmin/themes/bootstrap';

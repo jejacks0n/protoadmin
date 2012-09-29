@@ -11,6 +11,9 @@ body {
 body.sign-in {
   background: #eee;
 }
+.btn {
+  @include buttonBackground(#444, #222);
+}
 
 #header {
   border-bottom: 1px solid #555;
@@ -23,6 +26,7 @@ body.sign-in {
 
 #search {
   background-color: #222;
+  box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.7) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
   input {
     color: #888;
     &:focus {
@@ -83,6 +87,7 @@ body.sign-in {
     }
     ul {
       background-color: #2A2A2A;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset;
       li a {
         color: #777;
         border-top: 1px solid #333;
@@ -111,4 +116,12 @@ body.sign-in {
 
 #sign_in {
   background: #fff;
+}
+
+@media (max-width: 769px) and (min-width: 480px) {
+  #main_nav {
+    > ul ul li a {
+      border: 0;
+    }
+  }
 }

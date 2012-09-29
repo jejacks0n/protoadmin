@@ -1,0 +1,43 @@
+.breadcrumbs {
+  padding-left: 10px;
+  box-shadow: 0 0 1px #fff;
+  white-space: nowrap;
+  i {
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+  a {
+    display: inline-block;
+    padding: 3px 5px 6px 10px;
+    font-size: 11px;
+    text-decoration: none;
+    &:after {
+      display: inline-block;
+      content: '\203A';
+      font-size: 3em;
+      line-height: 12px;
+      font-weight: 100;
+      padding-left: 17px;
+    }
+    &:last-child {
+      font-weight: bold;
+      color: #444;
+      &:after {
+        content: '';
+        display: inline;
+      }
+    }
+  }
+}
+
+.breadcrumbs {
+  background-color: #E5E5E5;
+  border-top: 1px solid #D6D6D6;
+  border-bottom: 1px solid #D6D6D6;
+  a {
+    color: #666;
+    &:hover {
+      color: #333;
+    }
+  }
+}

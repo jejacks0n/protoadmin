@@ -1,0 +1,32 @@
+.widget-box {
+  position: relative;
+  clear: both;
+  margin: 16px 0;
+  border: 1px solid #cdcdcd;
+  background: #F9F9F9;
+  .widget-title {
+    background-color: #efefef;
+    @include gradient-vertical(#fdfdfd, #eaeaea);
+    border-bottom: 1px solid #cdcdcd;
+    height: 36px;
+    span.icon {
+      float: left;
+      padding: 8px 10px;
+      opacity: 0.7;
+      border-right: 1px solid #cdcdcd;
+    }
+    h5 {
+      color: #666;
+      text-shadow: 0 1px 0 white;
+      float: left;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 10px 12px 7px;
+      margin: 0;
+    }
+    .buttons {
+      float: right;
+      margin: 8px 10px 0 0;
+    }
+  }
+}

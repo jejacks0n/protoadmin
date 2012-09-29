@@ -1,0 +1,7 @@
+.breadcrumbs
+  = link_to("<i class='icon-home'></i>#{t('protoadmin.main_nav.home')}".html_safe, protoadmin.root_url, rel: 'tooltip', title: "Go to Home", data: {placement: 'bottom'})
+  - if content_for?(:breadcrumbs)
+    = content_for(:breadcrumbs)
+  - else
+    %a{ href: "#" } Some Page
+    %a{ href: "#" } This Page
