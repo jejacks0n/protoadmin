@@ -15,7 +15,11 @@ class Protoadmin.Layout.Content
     $(window).on('resize', @resize)
 
   resize: =>
-    @$el.css(minHeight: $(document).height() - 300)
-    @$el.css(minHeight: $(document).height() - @top)
+    height = $(document).height()
+    if @$el.height() < height - @top
+      @$el.css(minHeight: height - 300)
+      @$el.css(minHeight: height - @top)
+    else
+      @$el.css(minHeight: 'auto')
 
 jQuery -> new Protoadmin.Layout.Content()
