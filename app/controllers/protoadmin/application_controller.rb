@@ -7,7 +7,6 @@ class Protoadmin::ApplicationController < ActionController::Base
   layout :layout_for_devise_by_resource
 
   def dashboard
-    redirect_to new_admin_session_path unless admin_signed_in?
     render 'protoadmin/dashboard'
   end
 
