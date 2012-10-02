@@ -22,15 +22,16 @@ Protoadmin.setup do |config|
   Navigasmic.setup do |c|
     c.semantic_navigation :protoadmin_main_nav do |n|
       n.item 'Dashboard', proc{ protoadmin.root_path }, icon: 'home'
-      n.group 'Form Elements<span class="label">3</span>', icon: 'th-list', id: 'form_elements_nav' do
-        n.item 'Common Elements', '#'
-        n.item 'Validation', '/posts'
-        n.item 'Wizard', '#'
+      n.group 'Style Guide<span class="label">8</span>', icon: 'info-sign' do
+        n.item 'Forms', proc{ protoadmin.styleguide_path('forms') }, icon: 'th-list'
+        n.item 'Tables', proc{ protoadmin.styleguide_path('tables') }, icon: 'th'
+        n.item 'Elements', proc{ protoadmin.styleguide_path('elements') }, icon: 'briefcase'
+        n.item 'Messages', proc{ protoadmin.styleguide_path('messages') }, icon: 'warning-sign'
+        n.item 'Icons', proc{ protoadmin.styleguide_path('icons') }, icon: 'list-ul'
+        n.item 'Galleries', proc{ protoadmin.styleguide_path('galleries') }, icon: 'picture'
+        n.item 'Maps', proc{ protoadmin.styleguide_path('maps') }, icon: 'map-marker'
+        n.item 'Calendars', proc{ protoadmin.styleguide_path('calendars') }, icon: 'calendar'
       end
-      n.item 'Buttons &amp; Icons', '#', icon: 'tint'
-      n.item 'Interface Elements', '#', icon: 'pencil'
-      n.item 'Tables', '#', icon: 'th'
-      n.item 'Grid Layout', '#', icon: 'th-list'
     end
 
     c.semantic_navigation :protoadmin_user_nav do |n|
