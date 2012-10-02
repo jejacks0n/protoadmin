@@ -1,0 +1,113 @@
+.widget-box {
+  .dataTables_length {
+    position: relative;
+    top: -30px;
+    float: right;
+    color: #878787;
+    margin: 0 10px 0 0;
+    height: 0;
+    select {
+      margin-bottom: 0;
+      width: auto;
+    }
+  }
+  .dataTables_wrapper .ui-widget-header {
+    border-top: 1px solid #D5D5D5;
+    font-weight: normal;
+    margin-top: -1px;
+    @include gradient-vertical(#fdfdfd, #eaeaea);
+  }
+}
+
+.dataTables_wrapper .ui-widget-header {
+  @include clearfix();
+  .dataTables_filter {
+    margin: 4px 8px 4px 10px;
+    font-size: 11px;
+    color: #878787;
+    float: left;
+    input, label {
+      margin-bottom: 0;
+    }
+  }
+  .dataTables_paginate {
+    margin: 4px 10px 4px 8px;
+    float: right;
+    white-space: nowrap;
+    a {
+      text-decoration: none;
+      display: inline-block;
+      @include ie7-inline-block();
+      padding: 4px 8px;
+      font-size: $baseFontSize;
+      line-height: $baseLineHeight;
+      *line-height: $baseLineHeight;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-left: -1px;
+      @include buttonBackground($btnBackground, $btnBackgroundHighlight, $grayDark, 0 1px 1px rgba(255,255,255,.75));
+
+      border: 1px solid $btnBorder;
+      *border: 0; // Remove the border to prevent IE7's black border on input:focus
+      border-bottom-color: darken($btnBorder, 10%);
+      @include ie7-restore-left-whitespace(); // Give IE7 some love
+      @include box-shadow(#{inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)});
+
+      // Hover state
+      &:hover {
+        color: $grayDark;
+        text-decoration: none;
+        background-color: darken($white, 10%);
+        *background-color: darken($white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
+        background-position: 0 -15px;
+
+        // transition is only when going to hover, otherwise the background
+        // behind the gradient (there for IE<=9 fallback) gets mismatched
+        @include transition(background-position .1s linear);
+      }
+
+      // Focus state for keyboard and accessibility
+      &:focus {
+        @include tab-focus();
+      }
+
+      // Active state
+      &.active,
+      &:active {
+        background-color: darken($white, 10%);
+        background-color: darken($white, 15%) \9;
+        background-image: none;
+        outline: 0;
+        @include box-shadow(#{inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)});
+      }
+    }
+    .ui-state-disabled {
+      cursor: default;
+      background-color: darken($white, 10%);
+      background-image: none;
+      @include opacity(0.65);
+      @include box-shadow(none);
+    }
+    a.first {
+      @include border-top-left-radius(4px);
+      @include border-bottom-left-radius(4px);
+    }
+    a.last {
+      @include border-top-right-radius(4px);
+      @include border-bottom-right-radius(4px);
+    }
+    span {
+      .ui-state-disabled {
+        @include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight, $grayDark, 0 1px 1px rgba(255,255,255,.75));
+        color: #fff;
+        text-shadow: none;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+

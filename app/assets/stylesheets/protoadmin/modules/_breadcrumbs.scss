@@ -2,22 +2,29 @@
   padding-left: 10px;
   box-shadow: 0 0 1px #fff;
   white-space: nowrap;
+  margin-bottom: 25px;
   i {
     font-size: 1.2em;
     margin-right: 10px;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    line-height: 10px;
   }
   a {
     display: inline-block;
-    padding: 3px 5px 6px 10px;
+    padding: 6px 28px 6px 10px;
     font-size: 11px;
     text-decoration: none;
     &:after {
+      position: absolute;
       display: inline-block;
-      content: '\203A';
       font-size: 3em;
-      line-height: 12px;
       font-weight: 100;
+      line-height: 0;
+      margin-top: 7px;
       padding-left: 17px;
+      content: '\203A';
     }
     &:last-child {
       font-weight: bold;

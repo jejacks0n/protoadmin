@@ -3,6 +3,12 @@
 #
 #= require_self
 #= require_tree ./protoadmin/layout
+#= require_tree ./protoadmin/modules
+#
+#= require protoadmin/plugins/datatable
+#= require protoadmin/plugins/chosen
+#= require protoadmin/plugins/gritter
+#
 
 class @Protoadmin
 Protoadmin.Layout = {}

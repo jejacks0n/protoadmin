@@ -118,4 +118,19 @@
       }
     }
   }
+
+  .form-horizontal .control-group {
+    .control-label {
+      margin-left: 20px;
+      margin-bottom: 0;
+    }
+    .controls {
+      margin-left: 20px;
+    }
+    input[type="text"],
+    input[type="password"],
+    textarea {
+      width: 90%;
+    }
+  }
 }

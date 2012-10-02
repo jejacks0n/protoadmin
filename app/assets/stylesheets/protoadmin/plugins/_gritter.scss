@@ -1,0 +1,41 @@
+@import '/assets/gritter.css';
+
+.gritter-item,
+.gritter-bottom,
+.gritter-top,
+.gritter-close,
+.gritter-item-wrapper {
+  background-image: none !important;
+}
+.gritter-bottom,
+.gritter-top {
+  height: 1px
+}
+.gritter-item {
+  padding: 7px 11px 8px 11px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  p {
+    line-height: normal;
+  }
+}
+.gritter-close {
+  top: 7px;
+  right: 4px;
+  left: auto;
+  width: 19px;
+  height: 19px;
+  background: black;
+  border: 2px solid white;
+  border-radius: 40px;
+  &:after {
+    position: relative;
+    left: 6px;
+    top: -1px;
+    text-align: center;
+    font-family: 'FontAwesome';
+    font-size: 9px;
+    color: #fff;
+    content: "\f00d";
+  }
+}

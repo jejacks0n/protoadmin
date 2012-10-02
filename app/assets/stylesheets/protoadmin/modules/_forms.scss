@@ -1,0 +1,42 @@
+form {
+  margin-bottom: 0;
+  fieldset legend {
+    font-size: 20px;
+    font-weight: normal;
+    text-shadow: 0 1px 0 white;
+    margin: 0;
+    padding: 30px 0 0 20px;
+    color: #555;
+    border-bottom: 0;
+    width: auto;
+  }
+}
+
+.form-horizontal {
+  input[type="text"],
+  input[type="password"],
+  select[multiple],
+  textarea {
+    width: 80%;
+  }
+  .control-group {
+    border-top: 1px solid white;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 0;
+    .control-label {
+      padding-top: 15px;
+      width: 180px;
+    }
+    .controls {
+      margin-left: 200px;
+      padding: 10px 0;
+    }
+  }
+  .form-actions {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 200px;
+    border-top: 0;
+  }
+}
+
