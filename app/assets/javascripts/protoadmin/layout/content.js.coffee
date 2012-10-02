@@ -18,5 +18,4 @@ class Protoadmin.Layout.Content
     @$el.css(minHeight: $(document).height() - 300)
     @$el.css(minHeight: $(document).height() - @top)
 
-
 jQuery -> new Protoadmin.Layout.Content()
