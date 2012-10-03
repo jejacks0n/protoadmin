@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'navigasmic'
   s.add_dependency 'devise'
   s.add_dependency 'simple_form'
+  s.add_dependency 'crummy'
 
   # Test Dependencies
   s.add_development_dependency 'evergreen', '>= 1.0.0'
