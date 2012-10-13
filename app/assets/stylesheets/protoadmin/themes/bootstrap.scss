@@ -40,6 +40,11 @@
   border-bottom: 0;
   border-right: 0;
   margin-bottom: -1px;
+  > .filler {
+    border: 1px solid #bbb;
+    border-bottom: 0;
+    border-right: 0;
+  }
 }
 
 @media (max-width: 769px) and (min-width: 480px) {

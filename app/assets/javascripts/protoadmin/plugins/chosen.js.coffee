@@ -1,2 +1,4 @@
 #= require chosen
-jQuery -> $('select').chosen({disable_search_threshold: 8})
+
+$(window).on 'protoadmin', ->
+  $('select').chosen({disable_search_threshold: 8})

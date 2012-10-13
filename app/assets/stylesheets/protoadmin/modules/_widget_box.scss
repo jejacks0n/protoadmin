@@ -37,4 +37,24 @@
   .widget-content {
     padding: 12px 15px;
   }
+  &.nopadding {
+    .widget-content {
+      padding: 0;
+    }
+  }
+}
+
+
+.widget-box {
+  table.table {
+    margin-bottom: 0;
+  }
+  &.nopadding .widget-content {
+    table.table-bordered {
+      border: 0;
+      th:first-child, td:first-child {
+        border-left: 0;
+      }
+    }
+  }
 }

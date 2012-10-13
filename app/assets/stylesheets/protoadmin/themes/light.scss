@@ -103,6 +103,9 @@ body.sign-in {
   background-image: -ms-linear-gradient(top, #eee 0, #fff 80px);
   background-image: -o-linear-gradient(top, #eee 0, #fff 80px);
   background-image: linear-gradient(top, #eee 0, #fff 80px);
+  > .filler {
+    background: #fff;
+  }
 }
 
 #sign_in {

@@ -1,6 +1,5 @@
 @import '/assets/gritter.css';
 
-.gritter-item,
 .gritter-bottom,
 .gritter-top,
 .gritter-close,
@@ -13,8 +12,14 @@
 }
 .gritter-item {
   padding: 7px 11px 8px 11px;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
+  border-radius: 6px;
+  color: #EEE;
+  font-size: 11px;
+  font-family: verdana;
+  border: 1px solid black;
+  box-shadow: 0 1px 4px #000, 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  background: none;
+  @include gradient-vertical(#545454, #232323);
   p {
     line-height: normal;
   }
@@ -38,4 +43,12 @@
     color: #fff;
     content: "\f00d";
   }
+}
+#gritter-notice-wrapper {
+  top: 47px;
+  right: 6px;
+}
+.gritter-item-wrapper.hover .gritter-item {
+  background: none;
+  @include gradient-vertical(#545454, #232323);
 }

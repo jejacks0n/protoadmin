@@ -1,3 +1,9 @@
+@media (max-width: 767px) {
+  .modal {
+    position: absolute;
+  }
+}
+
 @media (max-width: 769px) and (min-width: 480px) {
   body {
     padding: 0;
@@ -129,6 +135,7 @@
     }
     input[type="text"],
     input[type="password"],
+    input[type="email"],
     textarea {
       width: 90%;
     }

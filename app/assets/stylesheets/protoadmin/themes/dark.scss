@@ -13,9 +13,6 @@ body {
 body.sign-in {
   background: #eee;
 }
-.btn {
-  @include buttonBackground(#444, #222);
-}
 
 #header {
   border-bottom: 1px solid #555;
@@ -41,6 +38,9 @@ body.sign-in {
 }
 
 #user_nav {
+  .btn {
+    @include buttonBackground(#444, #222);
+  }
   > ul > li > a {
     color: #999;
     &:hover {
@@ -57,6 +57,9 @@ body.sign-in {
 }
 
 #main_nav {
+  .btn {
+    @include buttonBackground(#444, #222);
+  }
   > ul {
     background: #444;
     border-top: 1px solid #393939;
@@ -114,6 +117,9 @@ body.sign-in {
   background-image: -ms-linear-gradient(top, #fff 0, #eee 80px);
   background-image: -o-linear-gradient(top, #fff 0, #eee 80px);
   background-image: linear-gradient(top, #fff 0, #eee 80px);
+  > .filler {
+    background: #eee;
+  }
 }
 
 #sign_in {

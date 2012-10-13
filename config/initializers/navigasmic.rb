@@ -4,6 +4,7 @@ Navigasmic.setup do |config|
     builder.wrapper_class = 'nav nav-list'
 
     builder.label_generator = proc do |label, options, has_link, has_nested|
+      label << "<span class='label'>#{options.delete(:label)}</span>".html_safe if options.has_key?(:label)
       if !has_nested || has_link
         label = "<span class='text'>#{label}</span>"
         options.has_key?(:icon) ? "<i class='icon icon-#{options.delete(:icon)}'></i>#{label}".html_safe : label

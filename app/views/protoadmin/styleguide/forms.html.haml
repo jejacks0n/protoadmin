@@ -1,109 +1,83 @@
-<h1>Form Examples</h1>
+%h2 Form Examples
 
-<div class="row-fluid">
-  <div class="span12">
-    <div class="widget-box">
-      <div class="widget-title">
-        <span class="icon">
-          <i class="icon-align-justify"></i>
-        </span>
-        <h5>Text inputs</h5>
-      </div>
-      <div class="widget-content nopadding">
-        <form action="#" method="get" class="form-horizontal">
-          <div class="control-group">
-            <label class="control-label">Normal text input</label>
-            <div class="controls">
-              <input type="text">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">Password input</label>
-            <div class="controls">
-              <input type="password">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">Input with description</label>
-            <div class="controls">
-              <input type="text">
-              <span class="help-block">This is a description</span>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">Input with placeholder</label>
-            <div class="controls">
-              <input type="text" placeholder="This is a placeholder...">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">Normal textarea</label>
-            <div class="controls">
-              <textarea style="margin-top: 0px; margin-bottom: 0px; height: 36px; "></textarea>
-            </div>
-          </div>
+= widget_box title: 'Text inputs', icon: 'align-justify', class: 'nopadding' do
+  %form.form-horizontal{action: '#', method: 'get'}
+    .form-inputs
+      .control-group
+        %label.control-label Normal text input
+        .controls
+          %input{type: 'text'}
+      .control-group
+        %label.control-label Password input
+        .controls
+          %input{type: 'password'}
+      .control-group
+        %label.control-label Input with description
+        .controls
+          %input{type: 'text'}
+            %p.help-block This is a description
+      .control-group
+        %label.control-label Input with placeholder
+        .controls
+          %input{placeholder: 'This is a placeholder...', type: 'text'}
+      .control-group
+        %label.control-label Normal textarea
+        .controls
+          %textarea{style: 'height:50px'}
+      %fieldset
+        %legend Select, radio, checkboxes, and file inputs
+        .control-group
+          %label.control-label Select input
+          .controls
+            %select.chzn-select
+              %option First option
+              %option Second option
+              %option Third option
+              %option Fourth option
+              %option Fifth option
+              %option Sixth option
+              %option Seventh option
+              %option Eighth option
+        .control-group
+          %label.control-label Multiple Select input
+          .controls
+            %select.chzn-select{multiple: 'multiple'}
+              %option First option
+              %option{selected: 'selected'} Second option
+              %option Third option
+              %option Fourth option
+              %option Fifth option
+              %option Sixth option
+              %option Seventh option
+              %option Eighth option
+        .control-group
+          %label.control-label Radio inputs
+          .controls
+            %label
+              %input{name: 'radios', type: 'radio'}
+              First One
+            %label
+              %input{name: 'radios', type: 'radio'}
+              Second One
+            %label
+              %input{name: 'radios', type: 'radio'}
+              Third One
+        .control-group
+          %label.control-label Checkboxes
+          .controls
+            %label
+              %input{name: 'radios', type: 'checkbox'}
+              First One
+            %label
+              %input{name: 'radios', type: 'checkbox'}
+              Second One
+            %label
+              %input{name: 'radios', type: 'checkbox'}
+              Third One
+        .control-group
+          %label.control-label File upload input
+          .controls
+            %input{type: 'file'}/
 
-          <fieldset>
-            <legend>Select, radio, checkboxes, and file inputs</legend>
-            <div class="control-group">
-              <label class="control-label">Select input</label>
-              <div class="controls">
-                <select class="chzn-select">
-                  <option>First option</option>
-                  <option>Second option</option>
-                  <option>Third option</option>
-                  <option>Fourth option</option>
-                  <option>Fifth option</option>
-                  <option>Sixth option</option>
-                  <option>Seventh option</option>
-                  <option>Eighth option</option>
-                </select>
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label">Multiple Select input</label>
-              <div class="controls">
-                <select class="chzn-select" multiple>
-                  <option>First option</option>
-                  <option selected>Second option</option>
-                  <option>Third option</option>
-                  <option>Fourth option</option>
-                  <option>Fifth option</option>
-                  <option>Sixth option</option>
-                  <option>Seventh option</option>
-                  <option>Eighth option</option>
-                </select>
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label">Radio inputs</label>
-              <div class="controls">
-                <label><input type="radio" name="radios"> First One</label>
-                <label><input type="radio" name="radios"> Second One</label>
-                <label><input type="radio" name="radios"> Third One</label>
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label">Checkboxes</label>
-              <div class="controls">
-                <label><input type="checkbox" name="radios"> First One</label>
-                <label><input type="checkbox" name="radios"> Second One</label>
-                <label><input type="checkbox" name="radios"> Third One</label>
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label">File upload input</label>
-              <div class="controls">
-                <input type="file" />
-              </div>
-            </div>
-          </fieldset>
-
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Save</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+    .form-actions
+      %button.btn.btn-primary{type: 'submit'} Save

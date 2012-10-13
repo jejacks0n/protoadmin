@@ -1,1 +1,30 @@
-@import 'protoadmin/base';
+// base
+@import 'protoadmin/fixes';
+@import 'protoadmin/variables';
+@import 'bootstrap';
+
+// plugins
+@import 'protoadmin/plugins/bootstrap';
+@import 'protoadmin/plugins/gritter';
+@import 'protoadmin/plugins/chosen';
+@import 'protoadmin/plugins/datatable';
+
+@import 'protoadmin/plugins/font_awesome';
+
+// layout
+@import 'protoadmin/layout/sign_in';
+@import 'protoadmin/layout/header';
+@import 'protoadmin/layout/search';
+@import 'protoadmin/layout/user_nav';
+@import 'protoadmin/layout/main_nav';
+@import 'protoadmin/layout/content';
+
+// modules
+@import 'protoadmin/modules/breadcrumbs';
+@import 'protoadmin/modules/widget_box';
+@import 'protoadmin/modules/forms';
+@import 'protoadmin/modules/tables';
+
+// responsive
+@import 'bootstrap-responsive';
+@import 'protoadmin/responsive';

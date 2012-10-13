@@ -48,7 +48,7 @@ class SetupProtoadmin < ActiveRecord::Migration
     # add_index :admins, :authentication_token, :unique => true
 
     if Rails.env.development?
-      puts "-- create admin user\n   -> admin@protoadmin:password"
+      puts "-- create admin user\n   -> admin@protoadmin.com:password"
       unless Admin.find_by_email('admin@protoadmin.com')
         Admin.create!(email: 'admin@protoadmin.com', first_name: 'Admin', last_name: 'User', password: 'password', password_confirmation: 'password')
       end

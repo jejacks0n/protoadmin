@@ -3,7 +3,7 @@ class Protoadmin.Layout.MainNav
   @el: '#main_nav'
 
   constructor: ->
-    @$el = $(MainNav.el)
+    @$el = $(@constructor.el)
     @build()
     @bindEvents()
 
@@ -15,8 +15,25 @@ class Protoadmin.Layout.MainNav
 
   bindEvents: ->
     @$el.find('> .btn').on('click', @toggle)
-    @$groups.on('click', (event) => @toggleGroup($(event.target).closest('li')))
+    @$groups.on('click', @onToggleGroup)
     $(window).on('resize', @onResize)
+    @$el.find('li:not(.has-nested) a').on('click', @onItemActivate)
+
+  onToggleGroup: (e) =>
+    @toggleGroup($(e.target).closest('li'))
+
+  onItemActivate: (e) =>
+    item = $(e.target).closest('li')
+    @closeAll() if @windowWidth() <= 767
+    @deactivateActives()
+    @activateItem(item) if item.length
+
+  deactivateActives: ->
+    @$el.find('li.active').removeClass('active')
+
+  activateItem: (item) ->
+    item.addClass('active')
+    @activateItem(parent) if (parent = item.parents('li')).length
 
   toggle: =>
     opacity = @$top.css('opacity')
@@ -25,17 +42,20 @@ class Protoadmin.Layout.MainNav
 
   closeAll: ->
     @$groups.find('ul').css(display: 'none', height: 0, opacity: 1)
-    @$top.css(height: '0')
+    @$top.removeClass('open')
 
   toggleGroup: ($el) =>
     $sub = $el.closest('li').find('ul').first()
     $sub.css({display: 'block', height: if $sub.height() > 0 then 0 else $sub.css(display: 'block', height: 'auto').height()})
 
   hidePoint: ->
-    width = $(window).width()
-    hidePoint = @lastWidth > 767 && width < 767 || @lastWidth < 767 && width > 767 || @lastWidth > 480 && width < 480 || @lastWidth < 480 && width > 480
+    width = @windowWidth()
+    hidePoint = @lastWidth >= 767 && width <= 767 || @lastWidth <= 767 && width >= 767 || @lastWidth >= 480 && width <= 480 || @lastWidth <= 480 && width >= 480
     @lastWidth = width
     hidePoint
+
+  windowWidth: ->
+    $(window).width()
 
   onResize: =>
     @closeAll() if @hidePoint()

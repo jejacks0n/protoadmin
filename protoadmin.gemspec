@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'devise'
   s.add_dependency 'simple_form'
   s.add_dependency 'crummy'
+  s.add_dependency 'pjax_rails'
 
   # Test Dependencies
   s.add_development_dependency 'evergreen', '>= 1.0.0'
