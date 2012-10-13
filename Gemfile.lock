@@ -9,6 +9,7 @@ PATH
       haml-rails
       jquery-rails
       navigasmic
+      pjax_rails
       rails (~> 3.2.8)
       sass-rails
       simple_form
@@ -109,6 +110,8 @@ GEM
       railties (~> 3.2)
     nokogiri (1.5.5)
     orm_adapter (0.4.0)
+    pjax_rails (0.3.3)
+      jquery-rails
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -161,7 +164,7 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
-    simple_form (2.0.3)
+    simple_form (2.0.4)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
     sinatra (1.3.3)
