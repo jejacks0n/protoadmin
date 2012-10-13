@@ -13,13 +13,13 @@
 .gritter-item {
   padding: 7px 11px 8px 11px;
   border-radius: 6px;
-  color: #EEE;
-  font-size: 11px;
-  font-family: verdana;
   border: 1px solid black;
   box-shadow: 0 1px 4px #000, 0 1px 0 rgba(255, 255, 255, 0.3) inset;
   background: none;
   @include gradient-vertical(#545454, #232323);
+  .gritter-title {
+    font-weight: normal;
+  }
   p {
     line-height: normal;
   }
