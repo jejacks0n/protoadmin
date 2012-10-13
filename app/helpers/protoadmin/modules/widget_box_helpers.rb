@@ -1,4 +1,4 @@
-module Protoadmin::ModuleHelpers
+module Protoadmin::Modules::WidgetBoxHelpers
 
   def widget_box(options = {}, &block)
     options[:class] = options[:class] ? "#{options[:class]} widget-box" : 'widget-box'

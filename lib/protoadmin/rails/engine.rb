@@ -12,7 +12,7 @@ module Protoadmin
 
     initializer "protoadmin.view_helpers" do
       ActiveSupport.on_load :action_controller do
-        helper Protoadmin::ModuleHelpers
+        helper Protoadmin::Modules::WidgetBoxHelpers
       end
     end
 
