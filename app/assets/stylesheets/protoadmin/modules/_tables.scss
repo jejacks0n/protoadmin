@@ -4,3 +4,17 @@ table.table.with-check {
     text-align: center;
   }
 }
+
+.widget-box {
+  table.table {
+    margin-bottom: 0;
+  }
+  &.nopadding .widget-content {
+    table.table-bordered {
+      border: 0;
+      th:first-child, td:first-child {
+        border-left: 0;
+      }
+    }
+  }
+}

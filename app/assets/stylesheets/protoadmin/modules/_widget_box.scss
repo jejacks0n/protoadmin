@@ -44,17 +44,10 @@
   }
 }
 
-
-.widget-box {
-  table.table {
+.modal.remote .widget-box {
+  border: 0;
+  background-color: transparent;
+  &:last-child {
     margin-bottom: 0;
-  }
-  &.nopadding .widget-content {
-    table.table-bordered {
-      border: 0;
-      th:first-child, td:first-child {
-        border-left: 0;
-      }
-    }
   }
 }

@@ -2,3 +2,28 @@
 [class*=" icon-"] {
   background-image: none !important;
 }
+
+.modal {
+  .modal-header h3 {
+    margin: 0;
+  }
+  &.remote {
+    overflow: hidden;
+    .modal-header {
+      position: relative;
+      border-bottom: 0;
+      padding: 0;
+      .close {
+        position: absolute;
+        right: 15px;
+        margin-top: 11px;
+      }
+    }
+    .modal-body {
+      overflow: auto;
+      margin: 0 -20px;
+      max-height: none;
+      padding: 0;
+    }
+  }
+}

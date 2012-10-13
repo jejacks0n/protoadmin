@@ -16,9 +16,10 @@ jQuery ->
       option = (if $target.data('modal') then 'toggle' else $.extend(remote: not /#/.test(href) and href $target.data(), $el.data()))
       $target.modal(option).one 'hide', -> $el.focus()
     else
-      $target = $('<div class="modal hide">')
+      $target = $('<div class="modal hide remote">')
       setContent = (content) ->
-        $target.html('<div class="modal-header"><button class="close" data-dismiss="modal">×</button></div>').append(content).modal()
+        body = $('<div class="modal-body">').append(content)
+        $target.html('<div class="modal-header"><button class="close" data-dismiss="modal">×</button></div>').append(body).modal()
       $.ajax href, success: (content) ->
         $target.on 'ajax:beforeSend', (event, xhr, options) ->
           options.success = (content) -> setContent(content)

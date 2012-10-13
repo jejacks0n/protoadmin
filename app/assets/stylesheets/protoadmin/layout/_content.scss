@@ -8,6 +8,9 @@
     height: 100%;
     width: 100%;
   }
+}
+
+.content {
   h1, h2 {
     white-space: nowrap;
     font-size: 28px;
@@ -26,5 +29,18 @@
   }
   .nopadding {
     padding: 0 !important;
+  }
+}
+
+.modal.remote {
+  h1, h2 {
+    padding: 8px 15px;
+    font-size: 20px;
+    font-weight: normal;
+    text-shadow: 0 1px 0 white;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    line-height: 30px;
   }
 }
