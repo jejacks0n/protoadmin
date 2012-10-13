@@ -5,9 +5,8 @@ module Protoadmin
     engine_name 'protoadmin'
 
     initializer "protoadmin.controllers" do
-      config.to_prepare do
-        Protoadmin::ApplicationController.send :include, Pjax
-        Protoadmin::Devise::RegistrationsController.send :include, Pjax
+      ActiveSupport.on_load :action_controller do
+        ActionController::Base.send :include, Pjax
       end
     end
 
