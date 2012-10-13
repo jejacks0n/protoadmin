@@ -1,0 +1,12 @@
+%h2 Edit Profile
+
+= simple_form_for resource, as: resource_name, url: 'admin/user', html: { method: :put } do |f|
+  .form-inputs
+    = f.input :email
+    = f.input :password, autocomplete: 'off', hint: "(leave blank if you don't want to change it)"
+    = f.input :password_confirmation, autocomplete: 'off'
+    = f.input :current_password, autocomplete: 'off', hint: "(we need your current password to confirm your changes)"
+
+  .form-actions
+    = f.button :submit, "Update"
+
