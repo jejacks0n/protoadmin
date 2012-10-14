@@ -109,7 +109,7 @@
   }
   #content {
     margin: 0;
-    @include border-radius(5px);
+    @include border-top-radius(5px);
   }
   #sign_in {
     padding: 10;
