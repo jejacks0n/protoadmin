@@ -2,6 +2,7 @@
 
 # Tooltips
 $(window).on 'protoadmin', ->
+  $('body > div.tooltip').remove()
   $('[rel="tooltip"]').tooltip()
 
 # Modals
