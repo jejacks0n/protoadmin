@@ -1,4 +1,5 @@
+- content = yield
 #content.content{rel: 'pjax-container'}
   = render partial: '/protoadmin/modules/breadcrumbs'
-  .container-fluid= yield
+  .container-fluid= content
   .filler
