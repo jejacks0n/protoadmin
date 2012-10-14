@@ -27,3 +27,15 @@
     }
   }
 }
+
+.alert-notice {
+  background-color: $infoBackground;
+  border-color: $infoBorder;
+  color: $infoText;
+}
+
+dl.dl-horizontal {
+  dd {
+    min-height: 20px;
+  }
+}
