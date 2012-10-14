@@ -11,8 +11,9 @@ module Protoadmin
     end
 
     initializer "protoadmin.view_helpers" do
-      ActiveSupport.on_load :action_controller do
-        helper Protoadmin::Modules::WidgetBoxHelpers
+      ActiveSupport.on_load :action_view do
+        ActionView::Base.send :include, Protoadmin::ViewHelpers
+        ActionView::Base.send :include, Protoadmin::Modules::WidgetBoxHelpers
       end
     end
 
