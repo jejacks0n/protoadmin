@@ -11,7 +11,7 @@
 }
 
 .content {
-  h1, h2 {
+  h1, h2, p#notice {
     white-space: nowrap;
     font-size: 28px;
     font-weight: normal;
@@ -19,6 +19,8 @@
     margin: 0 0 55px;
     padding: 20px 0;
     color: #555;
+    line-height: 40px;
+    min-height: 40px;
   }
   h3 {
     font-size: 20px;
