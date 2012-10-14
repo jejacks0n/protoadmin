@@ -1,0 +1,23 @@
+%h1 <%= singular_table_name.titleize %> Management
+
+= link_to 'New <%= human_name %>', new_<%= singular_table_name %>_path
+
+= widget_box title: 'Listing <%= plural_table_name %>', icon: 'th-list', class: 'nopadding' do
+  %table.table.table-bordered
+    %thead
+      %tr
+<% for attribute in attributes -%>
+        %th <%= attribute.human_name %>
+<% end -%>
+        %th.controls{width: '100px'}
+
+    %tbody
+      - @<%= plural_table_name %>.each do |<%= singular_table_name %>|
+        %tr
+<% for attribute in attributes -%>
+          %td= <%= singular_table_name %>.<%= attribute.name %>
+<% end -%>
+          %td
+            = link_to 'Show', <%= singular_table_name %>
+            = link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>)
+            = link_to 'Destroy', <%= singular_table_name %>, <%= key_value :method, ":delete" %>, <%= key_value :data, "{ #{key_value :confirm, "'Are you sure?'"} }" %>

@@ -1,0 +1,4 @@
+%h1 <%= singular_table_name.titleize %> Management
+
+= widget_box title: 'Editing <%= singular_table_name %>', icon: 'pencil', class: 'nopadding', crumb: true do
+  = render 'form'

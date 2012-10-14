@@ -1,0 +1,10 @@
+%h1 <%= singular_table_name.titleize %> Management
+
+= flash_messages
+
+= widget_box title: 'Viewing post', icon: 'list', crumb: true do
+  %dl.dl-horizontal
+<% for attribute in attributes -%>
+    %dt <%= attribute.human_name %>:
+    %dd= @<%= singular_table_name %>.<%= attribute.name %>
+<% end -%>
