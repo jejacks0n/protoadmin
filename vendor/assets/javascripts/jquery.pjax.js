@@ -310,7 +310,7 @@
         // Cache current container element before replacing it
         cachePush(pjax.state.id, context.clone().contents())
 
-        window.history.pushState(options.pjaxData, "", stripPjaxParam(options.requestUrl))
+        window.history.pushState(null, "", stripPjaxParam(options.requestUrl))
       }
 
       fire('pjax:start', [xhr, options])
@@ -355,7 +355,7 @@
     if (state && state.container) {
       var container = $(state.container)
       if (container.length) {
-        var contents = cacheMapping[state.id].value
+        var contents = cacheMapping[state.id]
 
         if (pjax.state) {
           // Since state ids always increase, we can deduce the history
@@ -380,8 +380,7 @@
           push: false,
           fragment: state.fragment,
           timeout: state.timeout,
-          scrollTo: false,
-          state: state
+          scrollTo: false
         }
 
         if (contents) {
@@ -632,7 +631,7 @@
 //
 // Returns nothing.
   function cachePush(id, value) {
-    cacheMapping[id] = {value: value}
+    cacheMapping[id] = value
     cacheBackStack.push(id)
 
     // Remove all entires in forward history stack after pushing
@@ -656,7 +655,7 @@
 // Returns nothing.
   function cachePop(direction, id, value) {
     var pushStack, popStack
-    cacheMapping[id] = {value: value}
+    cacheMapping[id] = value
 
     if (direction === 'forward') {
       pushStack = cacheBackStack
