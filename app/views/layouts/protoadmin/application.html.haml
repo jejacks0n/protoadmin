@@ -7,7 +7,7 @@
     = csrf_meta_tags
     = stylesheet_link_tag 'protoadmin', 'protoadmin/styleguide', "protoadmin/themes/#{Protoadmin.configuration.theme}"
     = javascript_include_tag 'protoadmin'
-  %body
+  %body{class: @body_class}
 
     = render partial: "/protoadmin/layout/header"
     - Protoadmin.configuration.layout.each do |partial|
