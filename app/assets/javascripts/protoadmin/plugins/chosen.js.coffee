@@ -1,4 +1,4 @@
 #= require chosen
 
-$(window).on 'protoadmin', ->
+Protoadmin 'plugin.chosen', ->
   $('select').chosen({disable_search_threshold: 8})

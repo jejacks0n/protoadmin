@@ -35,6 +35,7 @@ Protoadmin.setup do |config|
         n.item n.t('protoadmin.main_nav.galleries'), proc{ protoadmin.styleguide_path('galleries') }, icon: 'picture'
         n.item n.t('protoadmin.main_nav.maps'), proc{ protoadmin.styleguide_path('maps') }, icon: 'map-marker'
         n.item n.t('protoadmin.main_nav.calendars'), proc{ protoadmin.styleguide_path('calendars') }, icon: 'calendar'
+        n.item n.t('protoadmin.main_nav.graphs'), proc{ protoadmin.styleguide_path('graphs') }, icon: 'signal'
       end
     end
 

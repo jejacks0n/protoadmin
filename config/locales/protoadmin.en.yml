@@ -8,6 +8,7 @@ en:
     main_nav:
       home: 'Home'
       dashboard: 'Dashboard'
+      style_guide: 'Style Guide'
       forms: 'Forms'
       tables: 'Tables'
       elements: 'Elements'
@@ -16,7 +17,7 @@ en:
       galleries: 'Galleries'
       maps: 'Maps'
       calendars: 'Calendars'
-      style_guides: 'Style Guide'
+      graphs: 'Graphs'
 
   simple_form:
     "yes": 'Yes'

@@ -1,7 +1,7 @@
 #= require bootstrap
 
 # Tooltips
-$(window).on 'protoadmin', ->
+Protoadmin 'plugin.bootstrap.tooltip', ->
   $('body > div.tooltip').remove()
   $('[rel="tooltip"]').tooltip()
 
