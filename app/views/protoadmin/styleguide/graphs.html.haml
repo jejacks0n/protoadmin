@@ -1,0 +1,69 @@
+= javascript_include_tag 'protoadmin/styleguide'
+
+%h2 Graphical Visualizations
+
+%ul.graph-group
+  %li
+    .left
+      .positive{rel: 'peity'} 2,4,9,7,12,10,12
+      +20%
+    .right <strong>36094</strong> Visits
+  %li
+    .left
+      .neutral{rel: 'peity'} 20,15,18,14,10,9,9,9
+      0%
+    .right <strong>1433</strong> Users
+  %li
+    .left
+      .negative{rel: 'peity'} 3,5,9,-7,12,20,10
+      \-50%
+    .right <strong>243</strong> Registrations
+  %li
+    .left
+      .positive{rel: 'peity', data: {type: 'line'}} 12,6,9,23,14,10,17
+      +70%
+    .right <strong>8650</strong> Orders
+  %li
+    .left
+      .positive{rel: 'peity', data: {type: 'pie'}} 9/12
+      9/12
+    .right <strong>1493</strong> Opens
+  %li
+    .left
+      .neutral{rel: 'peity', data: {type: 'pie'}} 1/5
+      1/5
+    .right <strong>229</strong> Downloads
+
+%ul.graph-plain
+  %li
+    .left
+      .positive{rel: 'peity'} 2,4,9,7,12,10,12
+      +20%
+    .right <strong>36094</strong> Visits
+  %li
+    .left
+      .neutral{rel: 'peity'} 20,15,18,14,10,9,9,9
+      0%
+    .right <strong>1433</strong> Users
+  %li
+    .left
+      .negative{rel: 'peity'} 3,5,9,7,12,20,10
+      \-50%
+    .right <strong>8650</strong> Orders
+  %li
+    .left
+      .positive{rel: 'peity', data: {type: 'line'}} 12,6,9,23,14,10,17
+      +70%
+    .right
+      <strong>8650</strong> Orders
+
+
+= widget_box title: 'Line Graph', icon: 'bar-chart' do
+  #graph
+
+= widget_box title: 'Pie Charts', icon: 'adjust', id: 'pie_chart', class: 'nopadding' do
+  .row-fluid
+    .span6
+      .pie1{style: 'height:300px;'}
+    .span6
+      .pie2{style: 'height:300px;'}
