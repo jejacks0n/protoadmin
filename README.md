@@ -4,7 +4,7 @@
 [![Dependency Status](https://gemnasium.com/jejacks0n/protoadmin.png)](https://gemnasium.com/jejacks0n/protoadmin)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/jejacks0n/protoadmin)
 
-ProtoAdmin is a Rails 3 engine that provides a framework for building admin style management tools.  It's a collection
+Protoadmin is a Rails 3 engine that provides a framework for building admin style management tools.  It's a collection
 of css, javascript, view helpers, common libraries that help bootstrap your application with common interface patterns
 that I've used over the years.
 

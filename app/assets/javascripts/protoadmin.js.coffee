@@ -34,7 +34,8 @@ class @Protoadmin # singleton
   initializers = {}
 
   # called on dom:loaded or when pjax request has completed
-  @loaded: ->
+  @loaded: (data = {}) ->
+    $('body').attr(class: "#{data.body_class} animated") if data.body_class
     for name, options of initializers
       options.callback() if @allowed(options)
 
@@ -42,7 +43,6 @@ class @Protoadmin # singleton
     return true unless options.only || options.except
     if options.only
       for rule in (if typeof(options.only) == 'string' then [options.only] else options.only)
-        console.debug(@currentControllerAndAction(), rule)
         return true if @currentControllerAndAction() == rule
       return false
     if options.except
@@ -62,9 +62,8 @@ class @Protoadmin # singleton
   $(document).pjax('a', {container: '#content'}).on 'pjax:end', ->
     data = {}
     try data = JSON.parse($.pjax.state.data)
-    catch e
-#    $('body').attr(class: "#{data.body_class} animated")
-    Protoadmin.loaded()
+    catch e then data = {}
+    Protoadmin.loaded(data)
 
   # send every request as pjax so it's not wrapped in the template
   $.ajaxSetup(headers: {'X-PJAX': true})
