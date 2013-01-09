@@ -5,7 +5,6 @@ rescue LoadError
   puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
 end
 
-
 # Dummy App
 # -----------------------------------------------------------------------------
 APP_RAKEFILE = File.expand_path("../spec/dummy/Rakefile", __FILE__)
@@ -18,6 +17,10 @@ task 'app:db:load_config' do
   ActiveRecord::Migrator.migrations_paths = Rails.application.paths['db/migrate'].to_a
 end
 
+# Teabag
+# -----------------------------------------------------------------------------
+desc "Run javascript specs"
+task teabag: "app:teabag"
 
 # RSpec
 # -----------------------------------------------------------------------------
@@ -35,16 +38,9 @@ namespace :spec do
 
 end
 
-
-# Evergreen
-# -----------------------------------------------------------------------------
-require 'evergreen/tasks'
-
-
-
 # Default
 # -----------------------------------------------------------------------------
 #Rake::Task['default'].prerequisites.clear
 #Rake::Task['default'].clear
 
-task :default => ['spec:javascripts']
+task :default => [:spec, :teabag]

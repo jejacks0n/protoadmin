@@ -4,9 +4,17 @@ Protoadmin.setup do |config|
   # can be dark, light, or bootstrap or one that you provide.
   config.theme = :dark
 
-  # Specify the layout order.
+  # Specify the layout order
   # You can reorder the default, include additional layout modules or remove unused/unsupported ones.
   config.layout  = [:user_nav, :main_nav, :search, :content]
+
+  # Specify the devise model
+  # You can provide an alternate devise model if you're using something other than admin.
+  config.devise_model = :admin
+
+  # Parent controller
+  # You can set the parent controller to something if ActionController::Base doesn't do everything you want.
+  config.parent_controller = 'ActionController::Base'
 
   Devise.setup do |c|
     require 'devise/orm/active_record'
@@ -18,6 +26,8 @@ Protoadmin.setup do |config|
     c.strip_whitespace_keys = [:email]
     c.skip_session_storage = [:http_auth]
     c.stretches = Rails.env.test? ? 1 : 10
+    c.http_authenticatable = true
+    c.scoped_views = true
     c.reconfirmable = true
     c.reset_password_within = 6.hours
     c.sign_out_via = :get
@@ -40,9 +50,9 @@ Protoadmin.setup do |config|
     end
 
     c.semantic_navigation :protoadmin_user_nav do |n|
-      n.item n.t('protoadmin.user_nav.profile'), proc{ protoadmin.edit_admin_registration_path }, class: 'btn', icon: 'user', link_html: {rel: 'modal'}
+      n.item n.t('protoadmin.user_nav.profile'), proc{ protoadmin.edit_registration_path }, class: 'btn', icon: 'user', link_html: {rel: 'modal'}
       n.item n.t('protoadmin.user_nav.settings'), '#', class: 'btn', icon: 'cog'
-      n.item n.t('protoadmin.user_nav.sign_out'), proc{ protoadmin.destroy_admin_session_path }, class: 'btn', icon: 'share-alt'
+      #n.item n.t('protoadmin.user_nav.sign_out'), proc{ protoadmin.destroy_session_path(Protoadmin.configuration.devise_model) }, class: 'btn', icon: 'share-alt'
     end
   end
 

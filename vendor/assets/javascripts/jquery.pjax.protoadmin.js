@@ -242,6 +242,8 @@
         data: xhr.getResponseHeader('X-PJAX-DATA')
       }
 
+      fire('pjax:replaceState', [data, status, xhr, options])
+
       if (options.push || options.replace) {
         window.history.replaceState(pjax.state, container.title, container.url)
       }

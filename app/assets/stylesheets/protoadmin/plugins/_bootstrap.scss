@@ -35,7 +35,12 @@
 }
 
 dl.dl-horizontal {
+  dt {
+    width: 180px;
+    margin-right: 20px;
+  }
   dd {
     min-height: 20px;
+    margin-bottom: 5px;
   }
 }

@@ -1,19 +1,21 @@
 class Protoadmin::Devise::RegistrationsController < Devise::RegistrationsController
 
+  #skip_authorization_check
+
   include Pjax
 
   layout :layout
 
-  before_filter :authenticate_admin!, :add_crumbs
+  before_filter :authenticate!
 
   private
 
-  def layout
-    pjax_request? ? 'protoadmin/pjax' : 'protoadmin/application'
+  def authenticate!
+    self.send("authenticate_#{Protoadmin.configuration.devise_model}!")
   end
 
-  def add_crumbs
-    add_crumb 'Profile', '#'
+  def layout
+    pjax_request? ? 'protoadmin/pjax' : 'protoadmin/application'
   end
 
   def self.mimes_for_respond_to

@@ -17,8 +17,8 @@ Navigasmic.setup do |config|
     builder.link_generator = proc do |label, link, link_options, has_nested|
       if has_nested
         link = '#'
-        label << "<b class='caret'></b>".html_safe
-        options.merge!(class: 'dropdown-toggle', data: {toggle: 'dropdown'})
+        #label << "<b class='caret'></b>".html_safe
+        link_options.merge!(class: 'dropdown-toggle', data: {toggle: 'dropdown'})
       end
       link_to(label, link, link_options)
     end
@@ -43,7 +43,7 @@ Navigasmic.setup do |config|
       if has_nested
         link = '#'
         label << "<b class='caret'></b>".html_safe
-        options.merge!(class: 'dropdown-toggle', data: {toggle: 'dropdown'})
+        link_options.merge!(class: 'dropdown-toggle', data: {toggle: 'dropdown'})
       end
       link_to(label, link, link_options)
     end

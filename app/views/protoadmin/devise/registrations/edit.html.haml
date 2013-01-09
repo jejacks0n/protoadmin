@@ -1,7 +1,7 @@
 %h2 Edit Profile
 
 = widget_box class: 'nopadding', title: 'Your Profile', icon: 'user' do
-  = simple_form_for resource, as: resource_name, url: protoadmin.admin_registration_path, remote: true, html: { method: :put, class: 'form-horizontal' } do |f|
+  = simple_form_for resource, as: resource_name, url: protoadmin.registration_path, remote: true, html: { method: :put, class: 'form-horizontal' } do |f|
     .form-inputs
       = f.input :email, autofocus: true
       = f.input :password, hint: "(leave blank if you don't want to change it)", input_html: { autocomplete: 'off' }

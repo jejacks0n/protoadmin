@@ -1,8 +1,6 @@
 module Protoadmin::Modules::WidgetBoxHelpers
 
   def widget_box(options = {}, &block)
-    add_crumb(options[:title], '#') if options.delete(:crumb)
-
     options[:class] = options[:class] ? "#{options[:class]} widget-box" : 'widget-box'
 
     if options[:icon] == :checkbox

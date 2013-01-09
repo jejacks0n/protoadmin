@@ -1,6 +1,6 @@
 #= require jquery
 #= require jquery_ujs
-#= require jquery.pjax
+#= require jquery.pjax.protoadmin
 #
 #= require_self
 #
@@ -59,11 +59,11 @@ class @Protoadmin # singleton
 
   # add pjax functionality
 
-  $(document).pjax('a', {container: '#content'}).on 'pjax:end', ->
-    data = {}
-    try data = JSON.parse($.pjax.state.data)
-    catch e then data = {}
-    Protoadmin.loaded(data)
+  pjax = $(document).pjax('a:not([data-remote]):not([data-behavior]):not([rel="modal"]):not([target="_blank"])', {container: '#content'}).on 'pjax:end', ->
+    Protoadmin.loaded($.pjax.state.data)
+
+  pjax.on 'pjax:replaceState', (e, data, status, xhr, options) ->
+    $.pjax.state.data = JSON.parse(xhr.getResponseHeader('X-PJAX-DATA'))
 
   # send every request as pjax so it's not wrapped in the template
   $.ajaxSetup(headers: {'X-PJAX': true})
